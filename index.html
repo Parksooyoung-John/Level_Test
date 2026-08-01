@@ -13,7 +13,65 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-<style>
+/* 학습 모드 선택 */
+.study-launcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 26px;
+}
+
+.study-launcher a {
+  display: block;
+  padding: 22px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #17233a;
+  background: #ffffff;
+  border: 2px solid #dce3ed;
+  box-shadow: 0 8px 22px -12px rgba(23, 35, 58, 0.28);
+  transition: transform 0.15s ease;
+}
+
+.study-launcher a:active {
+  transform: scale(0.98);
+}
+
+.study-launcher .study-button {
+  border-color: #7cb342;
+  background: #f3f9e9;
+}
+
+.study-launcher .test-button {
+  border-color: #5c6bc0;
+  background: #eef0ff;
+}
+
+.study-launcher .icon {
+  display: block;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.study-launcher strong {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.study-launcher small {
+  display: block;
+  color: #59677d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 650px) {
+  .study-launcher {
+    grid-template-columns: 1fr;
+  }
+}
+  <style>
 :root{
   --ink:#17233A; --ink-2:#43536E; --muted:#8494AE;
   --paper:#EFF3F8; --card:#FFFFFF; --line:#DCE3ED;
@@ -147,6 +205,26 @@ tr:nth-child(even) td{background:#F8FAFC}
     <h1>10개 문법, 하나씩 채우기</h1>
     <p>레슨을 눌러 규칙을 읽고, 바로 문제를 풀어 보세요. 칸이 다 채워지면 별이 붙습니다.</p>
   </header>
+  <section class="study-launcher" aria-label="학습 모드 선택">
+
+  <a class="study-button" href="#ribbon">
+    <span class="icon">📘</span>
+    <strong>문법 학습 시작</strong>
+    <small>
+      Lesson 1~10 문법 설명과 기본 문제를 차례대로 공부해요.
+    </small>
+  </a>
+
+  <a class="test-button"
+     href="./POLY_MAG1_Grammar_Quest_FINAL_REVIEWED.html">
+    <span class="icon">🏆</span>
+    <strong>종합 테스트 시작</strong>
+    <small>
+      보기를 직접 선택하고 점수와 오답 해설을 확인해요.
+    </small>
+  </a>
+
+</section>
 
   <nav class="ribbon" id="ribbon" aria-label="레슨 이동"></nav>
   <p class="ribbon-note">이번 시험 범위 · Unit 1 Lesson 1–6 + Unit 2 Lesson 7–10 (＋ 작년 총정리 · 실전 테스트)</p>
