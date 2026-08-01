@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="POLY MAG1 8월 레벨테스트 대비 문법 학습 페이지">
+<meta name="theme-color" content="#EFF3F8">
+<meta property="og:title" content="POLY MAG1 · August Level Test Prep">
+<meta property="og:description" content="Unit 1 Lesson 1-6 + Unit 2 Lesson 7-10 문법 정리와 문제 134개">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237CB342'/><text x='16' y='23' font-size='18' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>M</text></svg>">
+<title>POLY MAG1 · August Level Test Prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17233A; --ink-2:#43536E; --muted:#8494AE;
+  --paper:#EFF3F8; --card:#FFFFFF; --line:#DCE3ED;
+  --ok:#1F8A4C; --ok-bg:#E4F5EA; --no:#C93B54; --no-bg:#FCE8EC;
+  --l1:#7CB342; --l2:#9B6BC9; --l3:#F08A3E; --l4:#3EA5B5; --l5:#A4C639;
+  --l6:#B08BD6; --l7:#E8552D; --l8:#5AA9E6; --l9:#E4708A; --l10:#F2B134;
+  --lr:#5C6BC0; --lt:#17233A; --lw:#00897B;
+  --shadow:0 1px 0 rgba(23,35,58,.06), 0 8px 22px -12px rgba(23,35,58,.28);
+  --accent:var(--l1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);
+  background-image:linear-gradient(rgba(160,178,203,.20) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(160,178,203,.20) 1px,transparent 1px);
+  background-size:26px 26px;
+  color:var(--ink);
+  font-family:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-size:17px; line-height:1.62; -webkit-text-size-adjust:100%;
+}
+h1,h2,h3,.disp{font-family:"Baloo 2","Nunito",system-ui,sans-serif; font-weight:800; letter-spacing:-.01em; line-height:1.18; margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 96px}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:0;z-index:40;background:rgba(239,243,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1080px;margin:0 auto;padding:9px 18px;display:flex;align-items:center;gap:14px}
+.brand{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:16px;letter-spacing:.02em}
+.brand small{display:block;font-family:"Nunito";font-weight:700;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;line-height:1}
+.score{margin-left:auto;display:flex;align-items:center;gap:9px;font-weight:900;font-size:14px}
+.score b{font-size:19px;font-family:"Baloo 2"}
+.reset{border:1px solid var(--line);background:var(--card);color:var(--ink-2);font:700 13px "Nunito";padding:6px 11px;border-radius:99px;cursor:pointer}
+.reset:hover{border-color:var(--muted)}
+.reset.armed{background:var(--no);border-color:var(--no);color:#fff}
+
+/* ---------- hero ---------- */
+.hero{padding:30px 0 8px}
+.eyebrow{font-weight:900;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-size:clamp(30px,6vw,50px);margin:8px 0 4px}
+.hero p{margin:0;color:var(--ink-2);font-weight:600}
+
+/* ---------- signature: sticker ribbon ---------- */
+.ribbon{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 6px;padding:13px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.chip{position:relative;flex:1 1 62px;min-width:58px;height:56px;border:none;border-radius:13px;cursor:pointer;
+  background:#EDF1F7;overflow:hidden;font-family:"Baloo 2";font-weight:800;color:var(--ink-2);font-size:15px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;transition:transform .16s ease}
+.chip .fillbar{position:absolute;left:0;bottom:0;width:100%;height:0%;background:var(--c);opacity:.30;transition:height .45s cubic-bezier(.2,.8,.3,1)}
+.chip span{position:relative;z-index:1}
+.chip .pct{font-family:"Nunito";font-weight:900;font-size:10px;color:var(--ink-2);opacity:.75}
+.chip:hover{transform:translateY(-2px)}
+.chip[aria-current="true"]{box-shadow:inset 0 0 0 3px var(--c);color:var(--ink)}
+.chip.done::after{content:"★";position:absolute;top:3px;right:6px;font-size:11px;color:var(--c);z-index:2}
+.ribbon-note{font-size:12.5px;color:var(--muted);font-weight:700;margin:8px 2px 0}
+
+/* ---------- section head ---------- */
+.sec{margin-top:34px;scroll-margin-top:70px}
+.sechead{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:0 4px 12px;border-bottom:3px solid var(--accent)}
+.sechead .num{font-family:"Baloo 2";font-weight:800;font-size:13px;letter-spacing:.14em;color:#fff;background:var(--accent);padding:3px 10px;border-radius:99px}
+.sechead h2{font-size:clamp(21px,3.6vw,29px)}
+.sechead .pt{font-weight:800;color:var(--accent);font-size:15px;margin-left:auto}
+
+/* ---------- teach card ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px 22px;margin-top:16px}
+.rule{margin:0 0 14px}
+.rule:last-child{margin-bottom:0}
+.rule h3{font-size:16.5px;color:var(--accent);display:flex;align-items:center;gap:8px}
+.rule h3::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--accent);flex:none}
+.rule ul{margin:6px 0 0;padding-left:22px}
+.rule li{margin:3px 0}
+.rule li em{font-style:normal;background:linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 34%, white) 0);padding:0 2px;font-weight:700}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+caption{text-align:left;font-family:"Baloo 2";font-weight:800;font-size:15px;padding-bottom:7px;color:var(--ink-2)}
+th{background:var(--accent);color:#fff;font-weight:800;text-align:left;padding:7px 11px;font-size:13.5px}
+td{border-bottom:1px solid var(--line);padding:6px 11px}
+tr:nth-child(even) td{background:#F8FAFC}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---------- questions ---------- */
+.qhead{display:flex;align-items:center;gap:10px;margin:26px 4px 10px}
+.qhead h3{font-size:17px}
+.qhead .tag{font:900 11px "Nunito";letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:2px 8px;border-radius:99px}
+.q{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:15px 17px;margin-bottom:11px;box-shadow:var(--shadow)}
+.q .stem{font-weight:700;display:flex;gap:9px;align-items:flex-start}
+.q .n{font-family:"Baloo 2";font-weight:800;color:var(--accent);flex:none;min-width:22px}
+.q .fixnote{font-weight:900;color:var(--no);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:2px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+@media (max-width:620px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:9px;text-align:left;width:100%;padding:10px 12px;border:1.5px solid var(--line);background:#FBFCFE;border-radius:11px;
+  font:600 16px "Nunito";color:var(--ink);cursor:pointer;transition:border-color .14s,background .14s}
+.opt .k{font-family:"Baloo 2";font-weight:800;color:var(--muted);flex:none;width:18px}
+.opt:hover:not(:disabled){border-color:var(--accent);background:#fff}
+.opt:disabled{cursor:default}
+.opt.correct{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
+.opt.correct .k{color:var(--ok)}
+.opt.wrong{background:var(--no-bg);border-color:var(--no);color:var(--no)}
+.opt.wrong .k{color:var(--no)}
+.opt.dim{opacity:.5}
+.bank{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.bank .opt{width:auto;flex:0 0 auto}
+.typed{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.typed input{flex:1 1 260px;min-width:0;padding:10px 13px;border:1.5px solid var(--line);border-radius:11px;font:600 16px "Nunito";color:var(--ink);background:#FBFCFE}
+.typed input:focus{outline:3px solid color-mix(in srgb,var(--accent) 40%,white);border-color:var(--accent)}
+.btn{border:none;background:var(--accent);color:#fff;font:800 15px "Nunito";padding:10px 17px;border-radius:11px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--ink-2);border:1.5px solid var(--line)}
+.fb{margin-top:10px;padding:9px 12px;border-radius:10px;font-weight:800;font-size:14.5px;display:none}
+.fb.show{display:block}
+.fb.y{background:var(--ok-bg);color:var(--ok)}
+.fb.n{background:var(--no-bg);color:var(--no)}
+
+/* ---------- writing ---------- */
+.wtask{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 17px;margin-bottom:11px;box-shadow:var(--shadow);border-left:5px solid var(--lw)}
+.wtask textarea{width:100%;margin-top:10px;min-height:76px;padding:10px 12px;border:1.5px solid var(--line);border-radius:11px;font:400 16px "Nunito";resize:vertical;background:#FBFCFE;color:var(--ink)}
+.wtask textarea:focus{outline:3px solid #B2DFDB;border-color:var(--lw)}
+
+.footnote{margin-top:44px;padding:16px 18px;border-radius:14px;background:#E4E9F1;border:1px solid var(--line);font-size:13.5px;color:var(--ink-2);font-weight:600}
+:focus-visible{outline:3px solid #5AA9E6;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="bar-in">
+  <div class="brand">MAG1 Level Test<small>Poly Language Academy</small></div>
+  <div class="score">맞은 개수 <b id="sTot">0</b> / 134
+    <button class="reset" id="btnReset">처음부터</button>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">August · Grammar Review</div>
+    <h1>10개 문법, 하나씩 채우기</h1>
+    <p>레슨을 눌러 규칙을 읽고, 바로 문제를 풀어 보세요. 칸이 다 채워지면 별이 붙습니다.</p>
+  </header>
+
+  <nav class="ribbon" id="ribbon" aria-label="레슨 이동"></nav>
+  <p class="ribbon-note">이번 시험 범위 · Unit 1 Lesson 1–6 + Unit 2 Lesson 7–10 (＋ 작년 총정리 · 실전 테스트)</p>
+
+  <main id="main"></main>
+
+  <div class="footnote">
+    <b>선생님 안내</b> · 이 페이지는 정답이 즉시 표시됩니다. 시험처럼 풀리게 하려면 인쇄용 Word 교재를 사용하세요.
+    Lesson 9 <b>Special Pronouns</b>는 I/me·we/us와 this/that/these/those를 함께 다루었고,
+    Lesson 10 <b>Adjectives</b>는 관사(a/an/the)와 수량·성질 형용사로 구성했습니다. 교재 내용과 다르면 알려주세요.
+  </div>
+</div>
+
+<script>
+const D = {"meta": {"title": "POLY MAG1 · August Level Test Prep", "subtitle": "Grammar Study Guide & Practice Workbook", "scope_main": "This Year — Unit 1 (Lessons 1–6) + Unit 2 (Lessons 7–10)", "scope_review": "Last Year — Grammar & Writing Units 1–2 (L1–L12) / Grammar Workbook (L1–L12)"}, "core": [{"no": 1, "unit": "Unit 1", "lesson": "Lesson 1", "title": "Bug Me!", "point": "Regular and Irregular Verbs (Past Tense)", "teach": [{"h": "What is past tense?", "b": ["A verb tells an action. The PAST TENSE tells about an action that already happened.", "Time words that signal past tense: yesterday, last night, last week, ago, this morning, in 2020."]}, {"h": "Regular verbs — add -ed", "b": ["Most verbs: play → played, walk → walked, help → helped", "Ends in e → add only -d: like → liked, dance → danced", "Consonant + y → change y to i, add -ed: cry → cried, study → studied", "One short vowel + one consonant → double the consonant: stop → stopped, hop → hopped"]}, {"h": "Irregular verbs — no -ed", "b": ["Irregular verbs change their spelling. You must memorize them."]}], "chart": {"caption": "Irregular Verbs to Memorize", "headers": ["Present", "Past", "Present", "Past", "Present", "Past"], "rows": [["go", "went", "eat", "ate", "see", "saw"], ["run", "ran", "come", "came", "give", "gave"], ["take", "took", "make", "made", "write", "wrote"], ["sing", "sang", "drink", "drank", "ride", "rode"], ["sit", "sat", "tell", "told", "buy", "bought"], ["catch", "caught", "teach", "taught", "think", "thought"], ["find", "found", "get", "got", "have", "had"], ["do", "did", "say", "said", "know", "knew"], ["grow", "grew", "fly", "flew", "put", "put"], ["read", "read", "", "", "", ""]]}, "questions": [{"t": "mc", "q": "Yesterday we ______ to the science museum.", "options": ["go", "goes", "went", "going"], "answer": "went"}, {"t": "mc", "q": "My sister ______ her room last weekend.", "options": ["clean", "cleans", "cleaned", "cleaning"], "answer": "cleaned"}, {"t": "mc", "q": "The baby ______ because she was hungry.", "options": ["cryed", "cried", "cries", "crying"], "answer": "cried"}, {"t": "mc", "q": "Dad ______ a big cake for my birthday last night.", "options": ["make", "makes", "maked", "made"], "answer": "made"}, {"t": "mc", "q": "Which verb is an IRREGULAR past tense verb?", "options": ["walked", "jumped", "ate", "played"], "answer": "ate"}, {"t": "fill", "q": "Tom ______ his bike when he saw the red light.", "box": ["stopped", "planned", "hopped", "shopped"], "answer": "stopped"}, {"t": "fill", "q": "I ______ a beautiful rainbow after the rain. (see)", "box": ["saw", "seen", "seed", "sees"], "answer": "saw"}, {"t": "fix", "q": "I goed to the beach last summer.", "answer": "I went to the beach last summer."}]}, {"no": 2, "unit": "Unit 1", "lesson": "Lesson 2", "title": "Animals and Us", "point": "Pronouns", "teach": [{"h": "What is a pronoun?", "b": ["A PRONOUN takes the place of a noun so you do not repeat the same word.", "Sam is my friend. → He is my friend."]}, {"h": "Subject pronouns (before the verb)", "b": ["I, you, he, she, it, we, they", "They play soccer every day."]}, {"h": "Object pronouns (after the verb or after a preposition)", "b": ["me, you, him, her, it, us, them", "Mom called me.  /  Sit next to her."]}, {"h": "Match the pronoun to the noun", "b": ["one boy → he / him,  one girl → she / her,  one thing or animal → it", "two or more people → they / them,  myself + others → we / us"]}], "chart": {"caption": "Pronoun Chart", "headers": ["Subject", "Object", "Subject", "Object"], "rows": [["I", "me", "it", "it"], ["you", "you", "we", "us"], ["he", "him", "they", "them"], ["she", "her", "—", "—"]]}, "questions": [{"t": "mc", "q": "______ is my best friend at school.", "options": ["Him", "He", "His", "Her"], "answer": "He"}, {"t": "mc", "q": "Mom gave the birthday present to ______.", "options": ["I", "my", "me", "mine"], "answer": "me"}, {"t": "mc", "q": "Ann and Bob are here. ______ are my cousins.", "options": ["Them", "Their", "They", "Us"], "answer": "They"}, {"t": "mc", "q": "These books are heavy. Can you carry ______?", "options": ["they", "them", "their", "theirs"], "answer": "them"}, {"t": "mc", "q": "Which pronoun can replace \"the flowers\"?", "options": ["he", "she", "it", "they"], "answer": "they"}, {"t": "fill", "q": "Lisa loves art. ______ draws a picture every day.", "box": ["She", "He", "It", "We"], "answer": "She"}, {"t": "fill", "q": "I like Tom a lot. I play with ______ after school.", "box": ["he", "him", "his", "them"], "answer": "him"}, {"t": "fix", "q": "Her is a great singer.", "answer": "She is a great singer."}]}, {"no": 3, "unit": "Unit 1", "lesson": "Lesson 3", "title": "Mix and Match", "point": "Prepositions", "teach": [{"h": "What is a preposition?", "b": ["A PREPOSITION shows WHERE, WHEN, or WHICH DIRECTION something is.", "It comes before a noun: The cat is under the bed."]}, {"h": "Place prepositions", "b": ["in, on, at, under, over, above, below, behind, in front of, next to, beside, between, near"]}, {"h": "Direction prepositions", "b": ["to, into, out of, from, through, across, around, up, down"]}, {"h": "Time prepositions — memorize this rule!", "b": ["AT + clock time → at 7:00, at noon", "ON + day or date → on Monday, on May 5", "IN + month, season, year → in July, in winter, in 2026"]}], "chart": {"caption": "at / on / in for Time", "headers": ["Preposition", "Use it for", "Example"], "rows": [["at", "clock time", "at 8 o'clock"], ["on", "days and dates", "on Friday"], ["in", "months, seasons, years", "in December"]]}, "questions": [{"t": "mc", "q": "The cat is sleeping ______ the table.", "options": ["under", "of", "for", "and"], "answer": "under"}, {"t": "mc", "q": "We have art class ______ Monday.", "options": ["in", "at", "on", "to"], "answer": "on"}, {"t": "mc", "q": "My birthday is ______ July.", "options": ["on", "at", "in", "by"], "answer": "in"}, {"t": "mc", "q": "The movie starts ______ 7 o'clock.", "options": ["in", "at", "on", "of"], "answer": "at"}, {"t": "mc", "q": "Sam sat ______ Ann and Ben.", "options": ["among", "between", "under", "across"], "answer": "between"}, {"t": "mc", "q": "The family picture hangs ______ the sofa.", "options": ["above", "into", "of", "with"], "answer": "above"}, {"t": "fill", "q": "The cat jumped ______ the box and slept inside it.", "box": ["into", "behind", "next to", "across"], "answer": "into"}, {"t": "fix", "q": "We go to church in Sunday.", "answer": "We go to church on Sunday."}]}, {"no": 4, "unit": "Unit 1", "lesson": "Lesson 4", "title": "Night and Day", "point": "Adjectives", "teach": [{"h": "What is an adjective?", "b": ["An ADJECTIVE describes a noun. It tells what kind, how many, or which one.", "a big dog,  three books,  that chair"]}, {"h": "Where does it go?", "b": ["Before the noun: I have a red bag.", "After a linking verb (am / is / are / was / were, look, smell, taste, feel): The soup is hot."]}, {"h": "Two adjectives together", "b": ["Use a comma between two adjectives of the same kind: a small, white puppy"]}, {"h": "Careful!", "b": ["An adjective describes a NOUN. An adverb describes a VERB.", "She is a quick runner. (adjective)  /  She runs quickly. (adverb)"]}], "chart": {"caption": "Kinds of Adjectives", "headers": ["Kind", "Question", "Examples"], "rows": [["What kind", "What is it like?", "big, soft, funny, blue, round"], ["How many", "How many are there?", "one, five, many, few, some"], ["Which one", "Which one is it?", "this, that, these, those"]]}, "questions": [{"t": "mc", "q": "Which word is the ADJECTIVE? \"The tall boy ran quickly.\"", "options": ["tall", "boy", "ran", "quickly"], "answer": "tall"}, {"t": "mc", "q": "The soup smells ______.", "options": ["deliciously", "delicious", "deliciousness", "deliciousful"], "answer": "delicious"}, {"t": "mc", "q": "I saw ______ elephant at the zoo.", "options": ["a", "an", "any", "much"], "answer": "an"}, {"t": "mc", "q": "There are ______ cookies on the plate.", "options": ["much", "very", "six", "well"], "answer": "six"}, {"t": "mc", "q": "Which sentence has TWO adjectives?", "options": ["The dog barked loudly.", "I have a small, white puppy.", "She ran to school.", "We ate lunch at noon."], "answer": "I have a small, white puppy."}, {"t": "fill", "q": "The candy tastes very ______.", "box": ["cold", "sunny", "noisy", "sweet"], "answer": "sweet"}, {"t": "fill", "q": "It was a ______ day, so we went to the beach.", "box": ["cold", "sunny", "noisy", "rainy"], "answer": "sunny"}, {"t": "fix", "q": "She wore a dress beautiful to the party.", "answer": "She wore a beautiful dress to the party."}]}, {"no": 5, "unit": "Unit 1", "lesson": "Lesson 5", "title": "A New Idea", "point": "Adverbs That Tell When", "teach": [{"h": "What is an adverb?", "b": ["An ADVERB describes a verb. It tells HOW, WHEN, or WHERE an action happens.", "This lesson is about adverbs that tell WHEN."]}, {"h": "Adverbs that tell WHEN", "b": ["today, tonight, tomorrow, yesterday, now, soon, later, early, late", "first, next, then, last, finally", "always, usually, often, sometimes, never"]}, {"h": "Where does it go?", "b": ["At the end: We will leave soon.", "At the beginning: Yesterday, I went to the library.", "Before the main verb (always / never / often): She always eats breakfast."]}, {"h": "Careful!", "b": ["Match the adverb with the verb tense. Yesterday I went (NOT will go) to school."]}], "questions": [{"t": "mc", "q": "We will go to the zoo ______.", "options": ["quickly", "tomorrow", "under", "happy"], "answer": "tomorrow"}, {"t": "mc", "q": "Which word tells WHEN?", "options": ["softly", "later", "under", "blue"], "answer": "later"}, {"t": "mc", "q": "______ I brush my teeth. Then I go to bed.", "options": ["Slowly", "First", "Very", "Near"], "answer": "First"}, {"t": "mc", "q": "My grandma ______ visits us on the weekend.", "options": ["often", "loudly", "between", "tall"], "answer": "often"}, {"t": "mc", "q": "I saw that movie ______.", "options": ["yesterday", "neatly", "behind", "red"], "answer": "yesterday"}, {"t": "fill", "q": "Hurry up! The bus is leaving ______.", "box": ["now", "never", "always", "yesterday"], "answer": "now"}, {"t": "fill", "q": "I woke up ______, so I missed the school bus.", "box": ["today", "tonight", "early", "late"], "answer": "late"}, {"t": "fix", "q": "Yesterday I will go to the library.", "answer": "Yesterday I went to the library."}]}, {"no": 6, "unit": "Unit 1", "lesson": "Lesson 6", "title": "Listen Up!", "point": "Possessive Nouns", "teach": [{"h": "What is a possessive noun?", "b": ["A POSSESSIVE NOUN shows that someone owns or has something."]}, {"h": "The three rules", "b": ["1. Singular noun → add 's :  the dog's bone, Sam's book, the class's rule", "2. Plural noun ending in -s → add only ' :  the dogs' bones, the students' desks", "3. Irregular plural (no -s) → add 's :  the children's toys, the men's room, the mice's holes"]}, {"h": "Careful!", "b": ["The apostrophe goes BEFORE the s for one owner, AFTER the s for many owners.", "the boy's hats (one boy)  /  the boys' hats (many boys)"]}], "chart": {"caption": "Possessive Noun Practice", "headers": ["Noun", "Owner(s)", "Possessive Form"], "rows": [["cat", "one", "the cat's tail"], ["cats", "many", "the cats' tails"], ["baby", "one", "the baby's bottle"], ["babies", "many", "the babies' bottles"], ["child", "one", "the child's toy"], ["children", "many", "the children's toys"]]}, "questions": [{"t": "mc", "q": "This is ______ ball. (It belongs to one dog.)", "options": ["the dog ball", "the dogs ball", "the dog's ball", "the dogs' ball"], "answer": "the dog's ball"}, {"t": "mc", "q": "The ______ toys are all over the floor. (many children)", "options": ["childrens", "children's", "childrens'", "child's"], "answer": "children's"}, {"t": "mc", "q": "All the ______ desks are new. (many students)", "options": ["student's", "students", "students'", "students's"], "answer": "students'"}, {"t": "mc", "q": "That is ______ car.", "options": ["my fathers", "my father's", "my fathers'", "my father"], "answer": "my father's"}, {"t": "mc", "q": "Which one is correct for MANY BOYS?", "options": ["the boy's hats", "the boys' hats", "the boys hats'", "the boys's hats"], "answer": "the boys' hats"}, {"t": "fill", "q": "Write the possessive form: the cat + tail →  the ______ tail", "box": ["cats", "cat's", "cats'", "cats's"], "answer": "cat's"}, {"t": "fill", "q": "Write the possessive form: the ladies + hats →  the ______ hats", "box": ["ladies", "lady's", "ladies'", "ladie's"], "answer": "ladies'"}, {"t": "fix", "q": "The mens' room is on the second floor.", "answer": "The men's room is on the second floor."}]}, {"no": 7, "unit": "Unit 2", "lesson": "Lesson 7", "title": "Up It Goes!", "point": "Adverbs That Tell How", "teach": [{"h": "Adverbs that tell HOW", "b": ["These adverbs tell the way an action happens. Most of them end in -ly.", "slowly, quickly, quietly, loudly, carefully, happily, softly, neatly, safely, politely"]}, {"h": "Making adverbs from adjectives", "b": ["Most adjectives → add -ly :  quick → quickly, loud → loudly", "Adjective ends in -y → change y to i, add -ly :  happy → happily, easy → easily", "Adjective ends in -le → change e to y :  gentle → gently, simple → simply"]}, {"h": "Special adverbs", "b": ["good → well (NOT goodly):  He plays the piano well.", "fast → fast,  hard → hard,  late → late (no -ly change)"]}, {"h": "Careful!", "b": ["Adjective describes a noun; adverb describes a verb.", "He is a careful driver. (adj)  /  He drives carefully. (adv)"]}], "questions": [{"t": "mc", "q": "The turtle walks very ______.", "options": ["slow", "slowly", "slower", "slowness"], "answer": "slowly"}, {"t": "mc", "q": "My sister sings ______.", "options": ["beautiful", "beauty", "beautifully", "beautify"], "answer": "beautifully"}, {"t": "mc", "q": "Which adverb tells HOW?", "options": ["yesterday", "carefully", "inside", "many"], "answer": "carefully"}, {"t": "mc", "q": "Change the adjective \"happy\" into an adverb.", "options": ["happyly", "happily", "happyer", "happiness"], "answer": "happily"}, {"t": "mc", "q": "Tom plays the piano very ______.", "options": ["good", "well", "goodly", "best"], "answer": "well"}, {"t": "fill", "q": "Please write your name ______ so I can read it.", "box": ["quietly", "loudly", "neatly", "safely"], "answer": "neatly"}, {"t": "fill", "q": "The baby is sleeping, so please talk ______.", "box": ["quietly", "loudly", "quickly", "politely"], "answer": "quietly"}, {"t": "fix", "q": "He runs very quick.", "answer": "He runs very quickly."}]}, {"no": 8, "unit": "Unit 2", "lesson": "Lesson 8", "title": "Make It Happen!", "point": "Possessives (Possessive Adjectives & Possessive Pronouns)", "teach": [{"h": "Possessive adjectives — always before a noun", "b": ["my, your, his, her, its, our, their", "This is my bag.  /  I like her hat."]}, {"h": "Possessive pronouns — used alone (no noun after)", "b": ["mine, yours, his, hers, ours, theirs", "This bag is mine.  /  That hat is hers."]}, {"h": "Careful! its vs. it's", "b": ["its = belongs to it → The dog wagged its tail.", "it's = it is → It's raining outside.", "Possessive pronouns NEVER take an apostrophe: hers, yours, theirs, ours"]}], "chart": {"caption": "Possessive Forms", "headers": ["Pronoun", "Possessive Adjective (+ noun)", "Possessive Pronoun (alone)"], "rows": [["I", "my book", "mine"], ["you", "your book", "yours"], ["he", "his book", "his"], ["she", "her book", "hers"], ["it", "its tail", "—"], ["we", "our book", "ours"], ["they", "their book", "theirs"]]}, "questions": [{"t": "mc", "q": "That is ______ backpack.", "options": ["she", "her", "hers", "she's"], "answer": "her"}, {"t": "mc", "q": "This blue pencil is ______.", "options": ["my", "mine", "me", "I"], "answer": "mine"}, {"t": "mc", "q": "The dog wagged ______ tail happily.", "options": ["it's", "its", "its'", "it"], "answer": "its"}, {"t": "mc", "q": "We all love ______ new teacher.", "options": ["us", "our", "ours", "we"], "answer": "our"}, {"t": "mc", "q": "Those seats near the window are ______.", "options": ["their", "theirs", "them", "they're"], "answer": "theirs"}, {"t": "fill", "q": "Is this book ______? No, it is not mine.", "box": ["your", "yours", "my", "mine"], "answer": "yours"}, {"t": "fill", "q": "Ben lost ______ umbrella on the bus.", "box": ["his", "him", "he", "he's"], "answer": "his"}, {"t": "fix", "q": "The cat licked it's paw.", "answer": "The cat licked its paw."}]}, {"no": 9, "unit": "Unit 2", "lesson": "Lesson 9", "title": "My Helpers", "point": "Special Pronouns (I / me, we / us, this / that / these / those)", "teach": [{"h": "I and me", "b": ["Use I as the SUBJECT (the doer):  Tom and I play soccer.", "Use me as the OBJECT (after a verb or preposition):  Mom called Tom and me.", "Always name yourself LAST: Tom and I (NOT I and Tom)."]}, {"h": "we and us", "b": ["Use we as the SUBJECT:  We went camping.", "Use us as the OBJECT:  The teacher called us."]}, {"h": "Quick test", "b": ["Take out the other person and read the sentence again.", "Grandma made cookies for Sam and (I / me). → Grandma made cookies for me. ✔"]}, {"h": "this / that / these / those", "b": ["this = one thing, near me   /   that = one thing, far from me", "these = many things, near me   /   those = many things, far from me"]}], "questions": [{"t": "mc", "q": "Tom and ______ are on the same team.", "options": ["me", "I", "my", "mine"], "answer": "I"}, {"t": "mc", "q": "Grandma made cookies for Sam and ______.", "options": ["I", "my", "me", "mine"], "answer": "me"}, {"t": "mc", "q": "______ went camping last weekend.", "options": ["Us", "We", "Our", "Ours"], "answer": "We"}, {"t": "mc", "q": "The teacher called ______ to the front of the class.", "options": ["we", "us", "our", "ours"], "answer": "us"}, {"t": "mc", "q": "______ shoes over there are new.", "options": ["This", "That", "Those", "It"], "answer": "Those"}, {"t": "mc", "q": "______ is my favorite book. (You are holding it in your hand.)", "options": ["This", "These", "Those", "Them"], "answer": "This"}, {"t": "fill", "q": "Please wait for Jenny and ______ at the gate.", "box": ["I", "me", "we", "us"], "answer": "me"}, {"t": "fix", "q": "Me and my brother built a snowman.", "answer": "My brother and I built a snowman."}]}, {"no": 10, "unit": "Unit 2", "lesson": "Lesson 10", "title": "Snow Day!", "point": "Adjectives (Articles, How Many, What Kind)", "teach": [{"h": "Articles: a / an / the", "b": ["a + consonant SOUND:  a book, a dog, a university", "an + vowel SOUND (a, e, i, o, u):  an apple, an egg, an hour", "the = one special thing everyone knows:  the sun, the teacher, the book on my desk"]}, {"h": "Adjectives that tell HOW MANY", "b": ["one, two, ten, many, few, several, some, all, both, no", "Use a plural noun after a number: three books (NOT three book)"]}, {"h": "Adjectives that tell WHAT KIND", "b": ["Size: big, small, tall, tiny   Color: red, blue, white", "Shape: round, square   Feeling: happy, sleepy, angry   Touch: soft, rough, fluffy"]}, {"h": "Careful!", "b": ["Look at the SOUND, not the letter: an hour (h is silent), a uniform (u sounds like \"yu\")."]}], "questions": [{"t": "mc", "q": "I ate ______ orange for breakfast.", "options": ["a", "an", "any", "much"], "answer": "an"}, {"t": "mc", "q": "Look at ______ sun! It is so bright today.", "options": ["a", "an", "the", "some"], "answer": "the"}, {"t": "mc", "q": "There are ______ students in my class.", "options": ["much", "twenty", "very", "well"], "answer": "twenty"}, {"t": "mc", "q": "Which adjective tells HOW MANY?", "options": ["round", "several", "purple", "sleepy"], "answer": "several"}, {"t": "mc", "q": "Which adjective tells WHAT KIND?", "options": ["five", "many", "fluffy", "both"], "answer": "fluffy"}, {"t": "mc", "q": "We waited for ______ hour at the airport.", "options": ["a", "an", "some", "many"], "answer": "an"}, {"t": "fill", "q": "Sara found ______ old key under the bed.", "box": ["a", "an", "any", "much"], "answer": "an"}, {"t": "fix", "q": "There are many student in the gym.", "answer": "There are many students in the gym."}]}], "review_charts": [{"caption": "Last Year · Grammar & Writing (Units 1–2)", "headers": ["Lesson", "Grammar Point", "Key Rule to Remember"], "rows": [["L1 Friends Help Each Other", "Sentences / Capitalization", "A sentence starts with a capital letter and ends with . ? !"], ["L2 Families Celebrate", "Common & Proper Nouns / Names & Titles", "Proper nouns are capitalized: Korea, Monday, Dr. Kim"], ["L3 Our Pet Friends", "Action Verbs / Letter Punctuation", "Dear Grandma,  ...  Love, Mina"], ["L4 Caring for Animals", "Subjects & Predicates / Commas", "Subject = who or what; Predicate = what it does"], ["L5 Animal Survival", "Adjectives / Abbreviations", "Mon.  Dr.  St.  Jan.  (capital + period)"], ["L6 Animal Lessons", "Pronouns / Book Titles", "Capitalize important words in a title: Charlotte's Web"], ["L7 Animal Homes", "Present Tense / Commas in a Series", "He + verb + s;  red, blue, and green"], ["L8 Animal Babies and Parents", "Possessive Nouns / Apostrophes", "cat's (one)  /  cats' (many)"], ["L9 The Earth Affects Us", "Questions & Statements / Punctuation", "Statement → .   Question → ?   Strong feeling → !"], ["L10 Up in the Sky", "Past Tense / Spelling Past Tense Verbs", "stop → stopped,  cry → cried,  like → liked"], ["L11 Let's Help Out!", "Helping Verbs / Contractions With Not", "am/is/are/was/were + verb-ing;  do not → don't"], ["L12 Weather Affects Us", "Prepositions / Capitalizing Proper Nouns", "at time, on day, in month"]]}, {"caption": "Last Year · Grammar Workbook (Lessons 1–12)", "headers": ["Lesson", "Grammar Point", "Key Rule to Remember"], "rows": [["L1 Education", "Simple Sentences", "One subject + one predicate = one complete idea"], ["L2 The Court System", "Kinds of Sentences", "Statement, Question, Command, Exclamation"], ["L3 Volunteers", "Compound Sentences", "Two sentences joined by , and / , but / , or / , so"], ["L4 Engineering", "Common & Proper Nouns", "Proper nouns name a special person, place, or thing"], ["L5 Sports", "Plural Nouns", "-s, -es (box→boxes), y→ies (baby→babies)"], ["L6 Visual Arts", "Verb Tenses", "Past / Present / Future (will + verb)"], ["L7 Traditions", "Using Commas", "In a series, in dates, after a greeting or closing"], ["L8 Performance Arts", "Abstract Nouns", "Ideas or feelings you cannot touch: love, courage"], ["L9 Inventions", "Writing Quotations", "\"I am hungry,\" said Ben."], ["L10 Inventions", "Plural & Irregular Nouns", "man→men, foot→feet, mouse→mice, leaf→leaves"], ["L11 Agriculture", "Pronouns and Antecedents", "The pronoun must match the noun it replaces"], ["L12 American Indian History", "Subject-Verb Agreement", "One subject → verb + s;  many subjects → verb (no s)"]]}], "review_questions": [{"t": "mc", "q": "Which sentence is a QUESTION?", "options": ["Close the door.", "What a big dog!", "Where is my hat?", "I like pizza."], "answer": "Where is my hat?"}, {"t": "mc", "q": "Which one is a COMPOUND sentence?", "options": ["I like apples and bananas.", "I like apples, but my brother likes bananas.", "Running very fast.", "The big red ball."], "answer": "I like apples, but my brother likes bananas."}, {"t": "mc", "q": "Which sentence is written correctly?", "options": ["my friend lives in seoul.", "My friend lives in seoul.", "My friend lives in Seoul.", "my Friend lives in Seoul."], "answer": "My friend lives in Seoul."}, {"t": "mc", "q": "Which word is a PROPER noun?", "options": ["city", "teacher", "Monday", "dog"], "answer": "Monday"}, {"t": "mc", "q": "The plural of \"box\" is ______.", "options": ["boxs", "boxes", "boxies", "box's"], "answer": "boxes"}, {"t": "mc", "q": "The plural of \"mouse\" is ______.", "options": ["mouses", "mice", "mousies", "mouse's"], "answer": "mice"}, {"t": "mc", "q": "In \"The little puppy barked loudly,\" what is the SUBJECT?", "options": ["barked loudly", "The little puppy", "loudly", "barked"], "answer": "The little puppy"}, {"t": "mc", "q": "Which word is the ACTION VERB? \"The children swim in the pool.\"", "options": ["children", "swim", "pool", "in"], "answer": "swim"}, {"t": "mc", "q": "She ______ to school every morning.", "options": ["walk", "walks", "walking", "to walk"], "answer": "walks"}, {"t": "mc", "q": "The birds ______ in the tall tree.", "options": ["sings", "sing", "is sing", "was sing"], "answer": "sing"}, {"t": "mc", "q": "I ______ going to the store right now.", "options": ["is", "are", "am", "be"], "answer": "am"}, {"t": "mc", "q": "The contraction for \"do not\" is ______.", "options": ["dont", "do'nt", "don't", "donot"], "answer": "don't"}, {"t": "mc", "q": "Which sentence uses commas correctly?", "options": ["I bought apples bananas and grapes.", "I bought apples, bananas, and grapes.", "I bought, apples bananas and grapes.", "I bought apples, bananas and, grapes."], "answer": "I bought apples, bananas, and grapes."}, {"t": "mc", "q": "The abbreviation for \"Monday\" is ______.", "options": ["Mo.", "Mon.", "mon", "MOND."], "answer": "Mon."}, {"t": "mc", "q": "Which name and title is written correctly?", "options": ["dr. Kim", "Dr kim", "Dr. Kim", "DR. kim"], "answer": "Dr. Kim"}, {"t": "mc", "q": "How should a book title be written?", "options": ["charlotte's web", "Charlotte's Web", "Charlotte's web", "CHARLOTTE'S web"], "answer": "Charlotte's Web"}, {"t": "mc", "q": "Which sentence uses quotation marks correctly?", "options": ["\"I am hungry, said Ben.", "I am hungry,\" said Ben.", "\"I am hungry,\" said Ben.", "\"I am hungry\" said, Ben."], "answer": "\"I am hungry,\" said Ben."}, {"t": "mc", "q": "Which word is an ABSTRACT noun?", "options": ["table", "courage", "rabbit", "river"], "answer": "courage"}, {"t": "mc", "q": "Maria lost her keys, so ______ looked everywhere.", "options": ["they", "he", "she", "it"], "answer": "she"}, {"t": "mc", "q": "Which sentence needs an EXCLAMATION MARK?", "options": ["What time is it", "Wow, that was amazing", "I have a pencil", "Please sit down"], "answer": "Wow, that was amazing"}, {"t": "mc", "q": "Which greeting is correct in a friendly letter?", "options": ["Dear Grandma.", "Dear Grandma,", "dear grandma", "Dear, Grandma"], "answer": "Dear Grandma,"}, {"t": "mc", "q": "The past tense of \"hop\" is ______.", "options": ["hoped", "hopped", "hopd", "hopping"], "answer": "hopped"}, {"t": "mc", "q": "The toys that belong to the babies are the ______ toys.", "options": ["babies", "baby's", "babies'", "babies's"], "answer": "babies'"}, {"t": "mc", "q": "Which date is written correctly?", "options": ["May 5 2026", "May 5, 2026", "May, 5 2026", "May 5 ,2026"], "answer": "May 5, 2026"}], "final_test": [{"t": "mc", "q": "Last night we ______ a movie at home.", "options": ["watch", "watches", "watched", "watching"], "answer": "watched"}, {"t": "mc", "q": "My little brother ______ all his milk this morning.", "options": ["drinked", "drank", "drunk", "drinks"], "answer": "drank"}, {"t": "mc", "q": "______ helped me with my homework yesterday.", "options": ["Him", "He", "His", "Her"], "answer": "He"}, {"t": "mc", "q": "Please give the ball to ______.", "options": ["I", "me", "my", "mine"], "answer": "me"}, {"t": "mc", "q": "The keys are ______ the drawer.", "options": ["on", "at", "in", "of"], "answer": "in"}, {"t": "mc", "q": "School starts ______ September 1.", "options": ["in", "on", "at", "by"], "answer": "on"}, {"t": "mc", "q": "What a ______ story that was!", "options": ["quickly", "wonderful", "wonderfully", "wonder"], "answer": "wonderful"}, {"t": "mc", "q": "Hurry! The bus will arrive ______.", "options": ["lately", "soon", "under", "loud"], "answer": "soon"}, {"t": "mc", "q": "This is my ______ bicycle. (It belongs to one sister.)", "options": ["sister", "sisters", "sister's", "sisters'"], "answer": "sister's"}, {"t": "mc", "q": "The ______ playground is being painted. (many children)", "options": ["childrens", "children's", "childrens'", "child's"], "answer": "children's"}, {"t": "mc", "q": "Please close the door ______.", "options": ["quiet", "quietly", "quieter", "quietness"], "answer": "quietly"}, {"t": "mc", "q": "My father drives very ______.", "options": ["careful", "carefully", "carefulness", "carely"], "answer": "carefully"}, {"t": "mc", "q": "Is this yellow jacket ______?", "options": ["you", "your", "yours", "you're"], "answer": "yours"}, {"t": "mc", "q": "The bird built ______ nest in the tree.", "options": ["it's", "its", "its'", "it"], "answer": "its"}, {"t": "mc", "q": "Jane and ______ walked home together.", "options": ["me", "I", "my", "mine"], "answer": "I"}, {"t": "mc", "q": "The coach chose Ben and ______ for the team.", "options": ["I", "me", "my", "mine"], "answer": "me"}, {"t": "mc", "q": "______ cookies on the table smell great.", "options": ["This", "That", "These", "It"], "answer": "These"}, {"t": "mc", "q": "I need ______ eraser for my test.", "options": ["a", "an", "any", "much"], "answer": "an"}, {"t": "mc", "q": "There are ______ eggs in the basket.", "options": ["much", "very", "twelve", "well"], "answer": "twelve"}, {"t": "mc", "q": "Which word is an adverb that tells WHEN?", "options": ["softly", "tomorrow", "under", "happy"], "answer": "tomorrow"}, {"t": "mc", "q": "Which word is an adverb that tells HOW?", "options": ["always", "never", "gently", "later"], "answer": "gently"}, {"t": "mc", "q": "Which sentence is correct?", "options": ["Me and Tom is friends.", "Tom and me are friends.", "Tom and I are friends.", "I and Tom are friends."], "answer": "Tom and I are friends."}, {"t": "mc", "q": "Which sentence uses the past tense correctly?", "options": ["Yesterday she goes to the park.", "Yesterday she went to the park.", "Yesterday she go to the park.", "Yesterday she going to the park."], "answer": "Yesterday she went to the park."}, {"t": "mc", "q": "Which one is a PROPER noun?", "options": ["river", "Han River", "water", "bridge"], "answer": "Han River"}, {"t": "mc", "q": "The plural of \"leaf\" is ______.", "options": ["leafs", "leaves", "leafes", "leaf's"], "answer": "leaves"}, {"t": "mc", "q": "The dogs ______ loudly every night.", "options": ["barks", "bark", "barking", "is bark"], "answer": "bark"}, {"t": "mc", "q": "Which sentence uses commas correctly?", "options": ["I like red, blue and, green.", "I like red blue and green.", "I like red, blue, and green.", "I, like red blue and green."], "answer": "I like red, blue, and green."}, {"t": "mc", "q": "The contraction for \"cannot\" is ______.", "options": ["cant", "can't", "ca'nt", "cann't"], "answer": "can't"}, {"t": "mc", "q": "Which one is a COMPOUND sentence?", "options": ["I wanted to play, but it was raining.", "I wanted to play outside.", "Playing in the cold rain.", "The cold, wet rain."], "answer": "I wanted to play, but it was raining."}, {"t": "fix", "q": "She sing beautiful yesterday.", "answer": "She sang beautifully yesterday."}], "writing": {"title": "Writing Practice (Guided Writing)", "intro": "Write your own sentences. Use the grammar you studied. Check your capital letters and end marks.", "tasks": ["Write 2 sentences about what you did LAST WEEKEND. Use two past tense verbs (one regular + one irregular).", "Write 2 sentences using a possessive noun (Ex. my sister's room) and a possessive pronoun (Ex. It is mine).", "Write 2 sentences that each use one preposition of place and one adverb that tells HOW.", "Write 2 sentences describing the weather today. Use at least three adjectives and one adverb that tells WHEN."]}};
+const HUE = ['--l1','--l2','--l3','--l4','--l5','--l6','--l7','--l8','--l9','--l10'];
+const KEYS = ['A','B','C','D'];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s).toLowerCase().replace(/[.,!?'"\u2019]/g,'').replace(/\s+/g,' ').trim();
+
+/* sections model */
+const SECTIONS = [];
+D.core.forEach((s,i)=>SECTIONS.push({
+  id:'l'+s.no, chip:'L'+s.no, num:s.lesson, name:s.title, point:s.point,
+  color:'var('+HUE[i]+')', teach:s.teach, chart:s.chart, qs:s.questions, tag:s.unit
+}));
+SECTIONS.push({id:'review', chip:'총정리', num:'PART 2', name:'작년 내용 총정리', point:'Review Sweep',
+  color:'var(--lr)', charts:D.review_charts, qs:D.review_questions, tag:'Last Year'});
+SECTIONS.push({id:'test', chip:'실전', num:'PART 3', name:'실전 모의 테스트', point:'30 Questions',
+  color:'var(--lt)', qs:D.final_test, tag:'Mixed'});
+SECTIONS.push({id:'writing', chip:'쓰기', num:'PART 4', name:D.writing.title, point:'Guided Writing',
+  color:'var(--lw)', writing:D.writing, qs:[], tag:'Output'});
+
+const state = {}; // sectionId -> {done:Set, right:Set}
+SECTIONS.forEach(s=>state[s.id]={done:new Set(), right:new Set()});
+
+/* ---------- render ---------- */
+function ruleHTML(t){
+  return `<div class="rule"><h3>${esc(t.h)}</h3><ul>${t.b.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul></div>`;
+}
+function tableHTML(c){
+  return `<div class="tblwrap"><table><caption>${esc(c.caption)}</caption>
+    <thead><tr>${c.headers.map(h=>'<th>'+esc(h)+'</th>').join('')}</tr></thead>
+    <tbody>${c.rows.map(r=>'<tr>'+r.map(x=>'<td>'+esc(x)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>`;
+}
+function qHTML(sec,q,i){
+  const id = sec.id+'-'+i;
+  let body='';
+  if(q.t==='mc'){
+    body = `<div class="opts">`+q.options.map((o,k)=>
+      `<button class="opt" data-s="${sec.id}" data-i="${i}" data-v="${esc(o)}"><span class="k">${KEYS[k]}</span><span>${esc(o)}</span></button>`).join('')+`</div>`;
+  } else if(q.t==='fill'){
+    body = `<div class="bank">`+q.box.map(o=>
+      `<button class="opt" data-s="${sec.id}" data-i="${i}" data-v="${esc(o)}"><span>${esc(o)}</span></button>`).join('')+`</div>`;
+  } else {
+    body = `<div class="typed">
+      <input type="text" id="in-${id}" placeholder="문장 전체를 바르게 고쳐 쓰세요" autocomplete="off" spellcheck="false">
+      <button class="btn" data-check="${sec.id}" data-i="${i}">확인</button>
+      <button class="btn ghost" data-reveal="${sec.id}" data-i="${i}">정답 보기</button></div>`;
+  }
+  const stem = q.t==='fix'
+    ? `<span><span class="fixnote">틀린 곳 고치기</span>${esc(q.q)}</span>`
+    : `<span>${esc(q.q)}</span>`;
+  return `<div class="q" id="q-${id}"><div class="stem"><span class="n">${i+1}</span>${stem}</div>
+    ${body}<div class="fb" id="fb-${id}"></div></div>`;
+}
+function secHTML(s){
+  let h = `<section class="sec" id="${s.id}" style="--accent:${s.color}">
+    <div class="sechead"><span class="num">${esc(s.num)}</span><h2>${esc(s.name)}</h2><span class="pt">${esc(s.point)}</span></div>`;
+  if(s.teach) h += `<div class="card">${s.teach.map(ruleHTML).join('')}${s.chart?tableHTML(s.chart):''}</div>`;
+  if(s.charts) h += `<div class="card">${s.charts.map(tableHTML).join('')}</div>`;
+  if(s.writing){
+    h += `<div class="card"><p style="margin:0;font-weight:700;color:var(--ink-2)">${esc(s.writing.intro)}</p></div>`;
+    h += s.writing.tasks.map((t,i)=>`<div class="wtask"><div class="stem"><span class="n">${i+1}</span><span>${esc(t)}</span></div>
+      <textarea placeholder="여기에 영어로 써 보세요"></textarea></div>`).join('');
+  }
+  if(s.qs.length){
+    h += `<div class="qhead"><span class="tag">${s.id==='test'?'Test':'Practice'}</span><h3>문제 ${s.qs.length}개</h3></div>`;
+    h += s.qs.map((q,i)=>qHTML(s,q,i)).join('');
+  }
+  return h+`</section>`;
+}
+
+document.getElementById('main').innerHTML = SECTIONS.map(secHTML).join('');
+
+/* ribbon */
+const ribbon = document.getElementById('ribbon');
+ribbon.innerHTML = SECTIONS.map((s,i)=>
+  `<button class="chip" data-go="${s.id}" style="--c:${s.color}"><span class="fillbar"></span>
+   <span>${esc(s.chip)}</span><span class="pct" id="pct-${s.id}">${s.qs.length?'0/'+s.qs.length:'·'}</span></button>`).join('');
+
+ribbon.addEventListener('click', e=>{
+  const b = e.target.closest('[data-go]'); if(!b) return;
+  document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+/* ---------- answering ---------- */
+const TOTAL = SECTIONS.reduce((a,s)=>a+s.qs.length,0);
+function sectionOf(id){ return SECTIONS.find(s=>s.id===id); }
+
+function paint(secId){
+  const s = sectionOf(secId), st = state[secId];
+  if(!s.qs.length) return;
+  const chip = ribbon.querySelector(`[data-go="${secId}"]`);
+  const pctEl = document.getElementById('pct-'+secId);
+  const p = st.right.size / s.qs.length;
+  chip.querySelector('.fillbar').style.height = (p*100)+'%';
+  pctEl.textContent = st.right.size+'/'+s.qs.length;
+  chip.classList.toggle('done', st.done.size===s.qs.length);
+  let tot=0; SECTIONS.forEach(x=>tot+=state[x.id].right.size);
+  document.getElementById('sTot').textContent = tot;
+}
+
+function feedback(secId,i,ok,msg){
+  const fb = document.getElementById('fb-'+secId+'-'+i);
+  fb.className = 'fb show '+(ok?'y':'n');
+  fb.textContent = msg;
+}
+
+document.getElementById('main').addEventListener('click', e=>{
+  const opt = e.target.closest('.opt');
+  if(opt && !opt.disabled){
+    const secId = opt.dataset.s, i = +opt.dataset.i;
+    const s = sectionOf(secId), q = s.qs[i], st = state[secId];
+    if(st.done.has(i)) return;
+    const chosen = opt.dataset.v, ok = chosen === q.answer;
+    st.done.add(i); if(ok) st.right.add(i);
+    const box = document.getElementById('q-'+secId+'-'+i);
+    box.querySelectorAll('.opt').forEach(b=>{
+      b.disabled = true;
+      if(b.dataset.v === q.answer) b.classList.add('correct');
+      else if(b === opt) b.classList.add('wrong');
+      else b.classList.add('dim');
+    });
+    feedback(secId,i,ok, ok ? '잘했어요! 정답입니다.' : '정답은 “'+q.answer+'” 입니다. 규칙을 다시 읽어 보세요.');
+    paint(secId);
+    return;
+  }
+  const chk = e.target.closest('[data-check]');
+  if(chk){
+    const secId = chk.dataset.check, i = +chk.dataset.i;
+    const s = sectionOf(secId), q = s.qs[i], st = state[secId];
+    if(st.done.has(i)) return;
+    const val = document.getElementById('in-'+secId+'-'+i).value;
+    if(!norm(val)){ feedback(secId,i,false,'먼저 문장을 써 주세요.'); return; }
+    const ok = norm(val) === norm(q.answer);
+    if(ok){ st.done.add(i); st.right.add(i); feedback(secId,i,true,'정답입니다! '+q.answer); paint(secId); }
+    else feedback(secId,i,false,'아직 아니에요. 동사와 어순을 다시 확인해 보세요.');
+    return;
+  }
+  const rev = e.target.closest('[data-reveal]');
+  if(rev){
+    const secId = rev.dataset.reveal, i = +rev.dataset.i;
+    const s = sectionOf(secId), q = s.qs[i], st = state[secId];
+    st.done.add(i);
+    feedback(secId,i,false,'정답: '+q.answer);
+    paint(secId);
+  }
+});
+
+document.getElementById('main').addEventListener('keydown', e=>{
+  if(e.key==='Enter' && e.target.matches('input[id^="in-"]')){
+    e.preventDefault();
+    e.target.closest('.typed').querySelector('[data-check]').click();
+  }
+});
+
+/* current section highlight */
+const io = new IntersectionObserver(es=>{
+  es.forEach(en=>{
+    if(en.isIntersecting){
+      ribbon.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-current','false'));
+      const c = ribbon.querySelector(`[data-go="${en.target.id}"]`);
+      if(c) c.setAttribute('aria-current','true');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+document.querySelectorAll('.sec').forEach(el=>io.observe(el));
+
+const btnReset = document.getElementById('btnReset');
+let armed = false, armTimer = null;
+
+function resetAll(){
+  SECTIONS.forEach(s=>{ state[s.id].done.clear(); state[s.id].right.clear(); });
+  document.querySelectorAll('.opt').forEach(b=>{
+    b.disabled = false;
+    b.classList.remove('correct','wrong','dim');
+  });
+  document.querySelectorAll('.fb').forEach(f=>{ f.className='fb'; f.textContent=''; });
+  document.querySelectorAll('.typed input, .wtask textarea').forEach(el=>{ el.value=''; });
+  SECTIONS.forEach(s=>paint(s.id));
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function disarm(){
+  armed = false;
+  clearTimeout(armTimer);
+  btnReset.textContent = '처음부터';
+  btnReset.classList.remove('armed');
+}
+
+btnReset.addEventListener('click', ()=>{
+  if(!armed){
+    armed = true;
+    btnReset.textContent = '정말 지울까요?';
+    btnReset.classList.add('armed');
+    armTimer = setTimeout(disarm, 4000);
+    return;
+  }
+  disarm();
+  resetAll();
+});
+
+SECTIONS.forEach(s=>paint(s.id));
+</script>
+</body>
+</html>
