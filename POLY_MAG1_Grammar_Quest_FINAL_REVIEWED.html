@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,maximum-scale=5" name="viewport"/>
+<title>POLY MAG1 Grammar Quest - Reviewed Scored Edition</title>
+<style>
+:root{--ink:#25324a;--blue:#4f7cff;--green:#27ae72;--yellow:#ffe58a;--line:#dce3ef;--paper:#fffdf8;--purple:#7659d6}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#eef4ff;color:var(--ink);font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.app{max-width:920px;margin:auto;background:var(--paper);min-height:100vh} header{padding:18px 20px;background:linear-gradient(135deg,#dfeaff,#fff2c7);border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:30px;color:#3158c8} header p{margin:7px 0 0;line-height:1.5} main{padding:16px}
+.hero{background:white;border:2px solid #ccd9fb;border-radius:22px;padding:20px;margin-bottom:16px} .hero h2{margin:0 0 8px;font-size:28px} .hero p{margin:0;line-height:1.55;color:#56627a}
+.test-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px} .test-summary div{background:#f3f6ff;border-radius:13px;padding:12px;text-align:center;font-weight:900} .test-summary b{display:block;font-size:25px;color:#3158c8}
+.lesson-card{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;background:white;border:2px solid var(--line);border-radius:18px;padding:15px;margin:10px 0}
+.lesson-card:active{transform:scale(.99)} .num{width:42px;height:42px;border-radius:13px;background:#e8efff;display:grid;place-items:center;font-size:20px;font-weight:900;color:#3158c8}
+.lesson-card b{display:block;font-size:19px} .lesson-card small{display:block;color:#6b7280;margin-top:4px} .arrow{margin-left:auto;font-size:30px;color:#8390a7}
+.section-link{display:block;text-decoration:none;color:inherit;background:#fff7d8;border:2px solid #f0d369;border-radius:18px;padding:17px;margin-top:14px;font-weight:900;font-size:19px}
+.section-link.test{background:#eee9ff;border-color:#b9a7f5;color:#49379b}
+.lesson-page,.review-page{padding:15px 0 30px;scroll-margin-top:10px} .topnav{position:sticky;top:0;z-index:5;display:flex;gap:8px;background:rgba(255,253,248,.95);padding:10px 0;border-bottom:1px solid var(--line);overflow:auto}
+.topnav a{white-space:nowrap;text-decoration:none;background:#edf2ff;color:#3158c8;font-weight:800;border-radius:10px;padding:9px 12px}
+.lesson-head{background:linear-gradient(135deg,#e7efff,#fff);border:2px solid #d6e0fa;border-radius:22px;padding:20px;margin-top:12px} .lesson-no{font-weight:900;color:#4f7cff}
+.lesson-head h2{font-size:29px;margin:5px 0} .lesson-head p{margin:0;color:#667085} .memory{background:#fff8d7;border:2px solid #efd56f;border-radius:20px;padding:18px;margin-top:15px}
+.memory h3,.examples h3{margin:0 0 12px} .rule{background:white;border-left:7px solid #ff9f43;border-radius:12px;padding:12px 14px;margin:9px 0;font-size:18px;line-height:1.5}
+.chant{margin-top:13px;background:#eaf8ff;border:2px dashed #6bb9dd;border-radius:14px;padding:13px;text-align:center;font-weight:900;font-size:19px}
+.examples{background:white;border:2px solid var(--line);border-radius:18px;padding:17px;margin-top:14px} .example-line{font-size:19px;background:#f5f7fb;padding:11px;border-radius:11px;margin:8px 0}
+.practice-title{font-size:25px;margin:24px 0 12px} .qcard{background:white;border:2px solid var(--line);border-radius:18px;padding:17px;margin:12px 0;break-inside:avoid}
+.qnum{font-weight:900;color:#4f7cff;margin-bottom:7px} .qtext{font-size:20px;line-height:1.45;font-weight:700} .opts{padding-left:30px;line-height:1.8;font-size:18px;margin:10px 0}
+details{margin-top:10px} summary{cursor:pointer;background:#edf2ff;border-radius:11px;padding:11px 13px;font-weight:900;color:#3158c8} .answer{margin-top:8px;background:#ebfff3;border-radius:11px;padding:12px;line-height:1.45}
+.finish{margin-top:18px;text-align:center} .finish a{display:inline-block;text-decoration:none;background:#27ae72;color:white;padding:13px 18px;border-radius:13px;font-weight:900}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px} .quick-card{background:white;border:2px solid var(--line);border-radius:15px;padding:14px} .quick-card h4{margin:0 0 6px;color:#5847af} .quick-card p{margin:0;line-height:1.45}
+.note{background:#f4efff;border:2px solid #d7c8ff;border-radius:16px;padding:14px;margin:18px 0;line-height:1.5}
+.test-unit{margin-top:25px;padding-top:10px;border-top:4px solid #d7cdf9} .test-unit h3{font-size:24px;color:#49379b} .test-unit h3 span{font-size:14px;background:#eee9ff;padding:5px 9px;border-radius:999px}
+.index-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px} .index-grid a{text-decoration:none;background:white;border:2px solid #d7cdf9;border-radius:14px;padding:13px;color:#49379b;font-weight:900}
+@media(max-width:650px){main{padding:12px}header h1{font-size:25px}.quick-grid,.index-grid{grid-template-columns:1fr}.test-summary{grid-template-columns:1fr 1fr 1fr}.test-summary div{font-size:12px;padding:9px 4px}.test-summary b{font-size:21px}.lesson-head h2{font-size:25px}.qtext{font-size:19px}}
+@media print{body{background:white}.app{max-width:none}.topnav,header,#home{display:none}.lesson-page,.review-page{page-break-before:always}details>summary{display:none}details>*{display:block!important}}
+
+.choice-list{display:grid;gap:10px;margin-top:14px}
+.choice{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:2px solid #d8dfeb;background:#fff;border-radius:15px;padding:13px 14px;font-size:18px;color:var(--ink);cursor:pointer;transition:.15s}
+.choice:active{transform:scale(.99)}
+.choice.selected{border-color:#4f7cff;background:#edf2ff;box-shadow:0 0 0 2px rgba(79,124,255,.12)}
+.choice.correct{border-color:#27ae72;background:#eafff1}
+.choice.wrong{border-color:#e45d5d;background:#fff0f0}
+.choice-letter{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#eef2f8;font-weight:900;color:#42526b}
+.choice.selected .choice-letter{background:#4f7cff;color:#fff}
+.choice.correct .choice-letter{background:#27ae72;color:#fff}
+.choice.wrong .choice-letter{background:#e45d5d;color:#fff}
+.feedback{display:none;margin-top:12px;border-radius:13px;padding:12px 14px;line-height:1.5}
+.feedback.show{display:block}
+.feedback.good{background:#eafff1;color:#16653d}
+.feedback.bad{background:#fff1f1;color:#992f2f}
+.quiz-controls{position:relative;background:linear-gradient(135deg,#eef3ff,#fff8d9);border:2px solid #ccd9fb;border-radius:19px;padding:16px;margin:20px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grade-btn,.retry-btn{border:0;border-radius:13px;padding:13px 18px;font-weight:900;font-size:17px;cursor:pointer}
+.grade-btn{background:#4f7cff;color:white}
+.retry-btn{background:white;color:#42526b;border:2px solid #cfd7e6}
+.score-result{width:100%;display:none;margin-top:5px;background:white;border-radius:15px;padding:16px;text-align:center}
+.score-result.show{display:block}
+.score-big{font-size:43px;font-weight:900;color:#3158c8}
+.score-percent{font-size:20px;font-weight:900;margin-top:4px}
+.score-message{margin-top:8px;line-height:1.45}
+.unanswered-note{color:#a65b00;font-weight:800;margin-top:8px}
+.saved-badge{display:inline-block;margin-top:8px;background:#eef2ff;color:#3158c8;border-radius:999px;padding:5px 9px;font-size:13px;font-weight:800}
+@media(max-width:650px){
+ .choice{font-size:17px;padding:13px 11px}
+ .grade-btn,.retry-btn{flex:1;min-width:130px}
+ .score-big{font-size:36px}
+}
+</style>
+<meta content="reviewed-2026-08-01" name="app-version"/></head>
+<body>
+<div class="app">
+<header><h1>🚀 POLY MAG1 Grammar Quest</h1><p>8월 Level Test 대비 · 문제 확장판</p></header>
+<main>
+<section id="home">
+<div class="hero">
+<h2>올해 범위를 충분히 연습해요!</h2>
+<p>보기를 직접 누른 뒤 <b>평가하기</b>를 선택하면 점수, 정답률, 틀린 문제 해설을 확인할 수 있습니다. 선택한 답과 평가 기록은 태블릿에 자동 저장됩니다.</p>
+<div class="test-summary"><div><b>50</b>Lesson 문제</div><div><b>80</b>Master Test</div><div><b>60</b>혼합 모의고사</div></div>
+</div>
+<a class="lesson-card" href="#lesson1"><span class="num">1</span><div><b>🏫 Simple Sentences</b><small>Education</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson2"><span class="num">2</span><div><b>⚖️ Kinds of Sentences</b><small>The Court System</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson3"><span class="num">3</span><div><b>🤝 Compound Sentences</b><small>Volunteers</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson4"><span class="num">4</span><div><b>🤖 Common &amp; Proper Nouns</b><small>Engineering</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson5"><span class="num">5</span><div><b>⚽ Plural Nouns</b><small>Sports</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson6"><span class="num">6</span><div><b>🎨 Verb Tenses</b><small>Visual Arts</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson7"><span class="num">7</span><div><b>🎎 Using Commas</b><small>Traditions</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson8"><span class="num">8</span><div><b>🎭 Abstract Nouns</b><small>Performance Arts</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson9"><span class="num">9</span><div><b>💡 Writing Quotations</b><small>Inventions</small></div><span class="arrow">›</span></a><a class="lesson-card" href="#lesson10"><span class="num">10</span><div><b>🧪 Irregular Plural Nouns</b><small>Inventions</small></div><span class="arrow">›</span></a>
+<a class="section-link test" href="#master">🧠 올해 범위 Master Test · 80문제</a>
+<a class="section-link test" href="#mixedA">📝 Mixed Mock Test A · 20문제</a>
+<a class="section-link test" href="#mixedB">📝 Mixed Mock Test B · 20문제</a>
+<a class="section-link" href="#quick">⚡ 작년 문법 Quick Review · 10문제</a>
+<a class="section-link" href="#mock">🏆 기존 Final Mock Test · 20문제</a>
+<div class="note"><b>추천 순서:</b> Lesson 학습 → 해당 Unit Master Test → Mixed Mock A → 오답 복습 → Mixed Mock B</div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson1" id="lesson1">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson1">이전</a><a href="#lesson2">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 1</div><h2>🏫 Simple Sentences</h2><p>Education</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">A simple sentence tells <b>one complete idea</b>.</div><div class="rule">It needs a <b>subject</b> (who or what) and a <b>predicate</b> (does what).</div><div class="rule">Begin with a <b>capital letter</b> and end with punctuation.</div><div class="chant">🎵 WHO + DOES WHAT = A COMPLETE SENTENCE!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">Students learn.</div><div class="example-line">Our teacher reads a book.</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="The children study. ‘The children’ is the subject and ‘study’ is the predicate." data-question-id="q1">
+<div class="qnum">Question 1</div>
+<div class="qtext">Which is a complete sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">In the classroom</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The children study.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">After school</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Mina The subject tells who does the action." data-question-id="q2">
+<div class="qnum">Question 2</div>
+<div class="qtext">Choose the subject: “Mina reads every night.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Mina</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">reads</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">every night</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="rings loudly The predicate tells what the subject does." data-question-id="q3">
+<div class="qnum">Question 3</div>
+<div class="qtext">Choose the predicate: “The bell rings loudly.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The bell</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">rings loudly</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">loudly</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="My class starts at nine. It begins with a capital and ends with a period." data-question-id="q4">
+<div class="qnum">Question 4</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">my class starts at nine.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">My class starts at nine.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">My class starts at nine</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="predicate We know who, but not what the teacher does." data-question-id="q5">
+<div class="qnum">Question 5</div>
+<div class="qtext">Which part is missing? “The friendly teacher”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">subject</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">predicate</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">capital letter</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 1 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson2" id="lesson2">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson1">이전</a><a href="#lesson3">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 2</div><h2>⚖️ Kinds of Sentences</h2><p>The Court System</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">A <b>statement</b> tells something and ends with a period.</div><div class="rule">A <b>question</b> asks something and ends with a question mark.</div><div class="rule">A <b>command</b> tells someone to do something.</div><div class="rule">An <b>exclamation</b> shows strong feeling and ends with an exclamation mark.</div><div class="chant">🎵 TELL .  ASK ?  COMMAND .  FEEL !</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">The judge listens.</div><div class="example-line">Did you hear the rule?</div><div class="example-line">Please sit down.</div><div class="example-line">What a fair decision!</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="? It asks something, so use a question mark." data-question-id="q6">
+<div class="qnum">Question 1</div>
+<div class="qtext">“Where is the courtroom___”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">!</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Please open the door. A command tells someone what to do." data-question-id="q7">
+<div class="qnum">Question 2</div>
+<div class="qtext">Which is a command?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The jury is ready.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Please open the door.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Is the jury ready?</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="What a surprising answer! It shows strong feeling." data-question-id="q8">
+<div class="qnum">Question 3</div>
+<div class="qtext">Which is an exclamation?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">What a surprising answer!</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Tell the truth.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Did he tell the truth?</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="statement It tells information." data-question-id="q9">
+<div class="qnum">Question 4</div>
+<div class="qtext">“The lawyer speaks clearly.” is a…</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">question</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">command</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation=". A polite command usually ends with a period." data-question-id="q10">
+<div class="qnum">Question 5</div>
+<div class="qtext">Choose the correct ending: “Please stand up___”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">!</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 2 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson3" id="lesson3">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson2">이전</a><a href="#lesson4">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 3</div><h2>🤝 Compound Sentences</h2><p>Volunteers</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">A compound sentence joins <b>two complete sentences</b>.</div><div class="rule">Use a comma before <b>and, but, or, so</b>.</div><div class="rule">Both sides must be able to stand alone.</div><div class="chant">🎵 COMPLETE IDEA, COMMA, JOINING WORD, COMPLETE IDEA!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">We picked up trash, and we planted flowers.</div><div class="example-line">I wanted to help, but I was late.</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="We helped at the park, and we cleaned the trail. It has two complete ideas joined by comma + and." data-question-id="q11">
+<div class="qnum">Question 1</div>
+<div class="qtext">Choose the compound sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We helped at the park.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We helped at the park, and we cleaned the trail.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Helping at the park</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="but The ideas contrast." data-question-id="q12">
+<div class="qnum">Question 2</div>
+<div class="qtext">I was tired, ___ I finished the job.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">but</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">or</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">so</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="or It gives a choice or warning." data-question-id="q13">
+<div class="qnum">Question 3</div>
+<div class="qtext">Wear gloves, ___ your hands may get dirty.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">and</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">or</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">but</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="I called, and she answered. The comma comes before the joining word." data-question-id="q14">
+<div class="qnum">Question 4</div>
+<div class="qtext">Which punctuation is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">I called, and she answered.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">I called and, she answered.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I called and she, answered.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="so The second idea is the result." data-question-id="q15">
+<div class="qnum">Question 5</div>
+<div class="qtext">We practiced a lot, ___ we improved.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">so</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">but</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 3 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson4" id="lesson4">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson3">이전</a><a href="#lesson5">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 4</div><h2>🤖 Common &amp; Proper Nouns</h2><p>Engineering</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">A <b>common noun</b> names any person, place, animal, or thing.</div><div class="rule">A <b>proper noun</b> names a special person, place, day, month, or title.</div><div class="rule">Proper nouns begin with <b>capital letters</b>.</div><div class="chant">🎵 SPECIAL NAME? CAPITAL GAME!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">engineer → Ms. Kim</div><div class="example-line">city → Seoul</div><div class="example-line">month → August</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="Han River Han River is a special name." data-question-id="q16">
+<div class="qnum">Question 1</div>
+<div class="qtext">Which is a proper noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">bridge</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Han River</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">engineer</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="seoul Seoul is a city name." data-question-id="q17">
+<div class="qnum">Question 2</div>
+<div class="qtext">Which word needs a capital letter? “We visit seoul.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">visit</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">seoul</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">we</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="machine Machine is a general name." data-question-id="q18">
+<div class="qnum">Question 3</div>
+<div class="qtext">Choose the common noun.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Monday</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Grace</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">machine</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="Mr. Lee Titles and names begin with capitals." data-question-id="q19">
+<div class="qnum">Question 4</div>
+<div class="qtext">Which is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mr. Lee</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Mr. lee</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Mr. Lee</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="We went to Busan in July. City and month names are proper nouns." data-question-id="q20">
+<div class="qnum">Question 5</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We went to busan in July.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We went to Busan in july.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We went to Busan in July.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 4 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson5" id="lesson5">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson4">이전</a><a href="#lesson6">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 5</div><h2>⚽ Plural Nouns</h2><p>Sports</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">Most nouns add <b>-s</b>.</div><div class="rule">Add <b>-es</b> after s, x, z, ch, sh.</div><div class="rule">Consonant + y: change y to i and add <b>-es</b>.</div><div class="rule">Some f/fe words change to <b>-ves</b>.</div><div class="chant">🎵 S, ES, IES, VES — LOOK AT THE END!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">ball → balls</div><div class="example-line">box → boxes</div><div class="example-line">city → cities</div><div class="example-line">knife → knives</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="coaches Words ending in ch add -es." data-question-id="q21">
+<div class="qnum">Question 1</div>
+<div class="qtext">Plural of “coach”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">coachs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">coaches</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">coachies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="teams Most nouns add -s." data-question-id="q22">
+<div class="qnum">Question 2</div>
+<div class="qtext">Plural of “team”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">teams</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">teames</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">teamies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="cities Consonant + y changes to -ies." data-question-id="q23">
+<div class="qnum">Question 3</div>
+<div class="qtext">Plural of “city”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">citys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">cities</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">cityes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="leaves Leaf changes f to ves." data-question-id="q24">
+<div class="qnum">Question 4</div>
+<div class="qtext">Plural of “leaf”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">leafs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">leaves</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">leafes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="boxes Words ending in x add -es." data-question-id="q25">
+<div class="qnum">Question 5</div>
+<div class="qtext">Plural of “box”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">boxs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">boxes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">boxies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 5 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson6" id="lesson6">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson5">이전</a><a href="#lesson7">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 6</div><h2>🎨 Verb Tenses</h2><p>Visual Arts</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">Present tense tells what happens now or regularly.</div><div class="rule">Past tense tells what already happened.</div><div class="rule">Future tense often uses <b>will + base verb</b>.</div><div class="rule">Circle time words before choosing the verb.</div><div class="chant">🎵 EVERY DAY = PRESENT, YESTERDAY = PAST, TOMORROW = WILL!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">I paint every day.</div><div class="example-line">I painted yesterday.</div><div class="example-line">I will paint tomorrow.</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="painted Yesterday signals past tense." data-question-id="q26">
+<div class="qnum">Question 1</div>
+<div class="qtext">Yesterday, Mia ___ a picture.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">paints</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">painted</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will paint</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will visit Tomorrow signals future tense." data-question-id="q27">
+<div class="qnum">Question 2</div>
+<div class="qtext">Tomorrow, we ___ the museum.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">visit</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">visited</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will visit</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="shapes A regular action uses present tense." data-question-id="q28">
+<div class="qnum">Question 3</div>
+<div class="qtext">Every Saturday, he ___ clay.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">shapes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">shaped</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will shape</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Last night, I drew a star. Last night signals past tense; draw → drew." data-question-id="q29">
+<div class="qnum">Question 4</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Last night, I draw a star.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Last night, I drew a star.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Last night, I will draw a star.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will visit Next week signals future tense." data-question-id="q30">
+<div class="qnum">Question 5</div>
+<div class="qtext">Next week, she ___ the gallery.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">visits yesterday</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">visited</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will visit</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 6 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson7" id="lesson7">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson6">이전</a><a href="#lesson8">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 7</div><h2>🎎 Using Commas</h2><p>Traditions</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">Use commas for <b>three or more items</b>.</div><div class="rule">Use a comma after <b>Yes, No, Well</b>.</div><div class="rule">Use commas in dates and between a city and country.</div><div class="rule">Use a comma before a conjunction in a compound sentence.</div><div class="chant">🎵 LIST, YES/NO, DATE, TWO SENTENCES — PAUSE WITH A COMMA!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">We ate rice, soup, and fruit.</div><div class="example-line">Yes, I know the dance.</div><div class="example-line">August 15, 2026</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="We need paper, glue, and scissors. Separate three items with commas." data-question-id="q31">
+<div class="qnum">Question 1</div>
+<div class="qtext">Choose the correct list.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We need paper glue and scissors.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We need paper, glue, and scissors.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We need, paper glue and scissors.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Yes, I can join. Use a comma after Yes." data-question-id="q32">
+<div class="qnum">Question 2</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Yes I can join.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Yes, I can join.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Yes I, can join.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="August 15, 2026 Put a comma between day and year." data-question-id="q33">
+<div class="qnum">Question 3</div>
+<div class="qtext">Choose the correct date.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">August 15 2026</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">August, 15 2026</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">August 15, 2026</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="I wore a hanbok, and I bowed. Comma comes before and." data-question-id="q34">
+<div class="qnum">Question 4</div>
+<div class="qtext">Choose the correct compound sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">I wore a hanbok, and I bowed.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">I wore, a hanbok and I bowed.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I wore a hanbok and, I bowed.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="We visited Busan, Korea. Use a comma between city and country." data-question-id="q35">
+<div class="qnum">Question 5</div>
+<div class="qtext">Which is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We visited Busan Korea.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We visited Busan, Korea.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We visited, Busan Korea.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 7 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson8" id="lesson8">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson7">이전</a><a href="#lesson9">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 8</div><h2>🎭 Abstract Nouns</h2><p>Performance Arts</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">A <b>concrete noun</b> can be seen, heard, touched, tasted, or smelled.</div><div class="rule">An <b>abstract noun</b> names an idea, feeling, quality, or state.</div><div class="rule">Many abstract nouns end in -ness, -ment, -tion, or -ity.</div><div class="chant">🎵 CAN I TOUCH IT? YES = CONCRETE, NO = ABSTRACT!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">dancer = concrete</div><div class="example-line">joy = abstract</div><div class="example-line">kindness = abstract</div><div class="example-line">excitement = abstract</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="excitement Excitement is a feeling." data-question-id="q36">
+<div class="qnum">Question 1</div>
+<div class="qtext">Which is an abstract noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">microphone</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">excitement</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">dancer</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="piano A piano can be seen and touched." data-question-id="q37">
+<div class="qnum">Question 2</div>
+<div class="qtext">Which is a concrete noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">kindness</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">honesty</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">piano</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="bravery Bravery is a quality." data-question-id="q38">
+<div class="qnum">Question 3</div>
+<div class="qtext">Choose the abstract noun.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">bravery</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">costume</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">stage</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="happiness Happiness is a feeling." data-question-id="q39">
+<div class="qnum">Question 4</div>
+<div class="qtext">Which word names a feeling?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">happiness</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">curtain</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">actor</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="drum A drum is a physical object." data-question-id="q40">
+<div class="qnum">Question 5</div>
+<div class="qtext">Which can you touch?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">friendship</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">drum</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">courage</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 8 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson9" id="lesson9">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson8">이전</a><a href="#lesson10">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 9</div><h2>💡 Writing Quotations</h2><p>Inventions</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">Quotation marks show the exact words a person says.</div><div class="rule">Begin the quotation with a capital letter.</div><div class="rule">Put end punctuation <b>inside</b> the quotation marks.</div><div class="rule">Use a comma to separate the speaker tag from the quotation.</div><div class="chant">🎵 SPOKEN WORDS INSIDE QUOTES — PUNCTUATION STAYS INSIDE!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">Lina said, “This robot can move.”</div><div class="example-line">“Can it talk?” asked Ben.</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="0" data-explanation="Ava said, “It works.” Use a comma after said, quotation marks, and punctuation inside." data-question-id="q41">
+<div class="qnum">Question 1</div>
+<div class="qtext">Which quotation is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Ava said, “It works.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Ava said “It works”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ava said, It works.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“Can it fly?” asked Leo. The question mark stays inside the quotation marks." data-question-id="q42">
+<div class="qnum">Question 2</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“Can it fly?” asked Leo.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“Can it fly”? asked Leo.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Can it fly? “asked Leo.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Ben said, “This is new.” Comma after said, capital first word, period inside." data-question-id="q43">
+<div class="qnum">Question 3</div>
+<div class="qtext">Which is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Ben said “This is new.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Ben said, “This is new.”</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ben said, “this is new”.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Around the exact spoken words Quotation marks show the exact words spoken." data-question-id="q44">
+<div class="qnum">Question 4</div>
+<div class="qtext">Where do quotation marks go?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Around the speaker's name</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Around the exact spoken words</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Around the whole paragraph</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“I can fix it,” said June. The comma goes inside the closing quotation mark." data-question-id="q45">
+<div class="qnum">Question 5</div>
+<div class="qtext">Choose the correct punctuation.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“I can fix it,” said June.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“I can fix it”, said June.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">“I can fix it” said June.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 9 끝! 목차로 가기</a></div>
+</section>
+<section class="lesson-page" data-quiz-group="lesson-lesson10" id="lesson10">
+<div class="topnav"><a href="#home">← 목차</a><a href="#lesson9">이전</a><a href="#lesson10">다음 →</a></div>
+<div class="lesson-head"><div class="lesson-no">Lesson 10</div><h2>🧪 Irregular Plural Nouns</h2><p>Inventions</p></div>
+<div class="memory"><h3>🧠 꼭 기억해요</h3><div class="rule">Some plurals do not follow -s/-es rules.</div><div class="rule">Some change spelling completely.</div><div class="rule">Some stay the same in singular and plural.</div><div class="rule">Learn them as word pairs.</div><div class="chant">🎵 IRREGULAR MEANS: DON'T JUST ADD S!</div></div>
+<div class="examples"><h3>🔊 소리 내어 읽기</h3><div class="example-line">child → children</div><div class="example-line">person → people</div><div class="example-line">mouse → mice</div><div class="example-line">tooth → teeth</div><div class="example-line">deer → deer</div></div>
+<h3 class="practice-title">✏️ Lesson Practice</h3>
+<div class="qcard" data-answer="1" data-explanation="children Child changes to children." data-question-id="q46">
+<div class="qnum">Question 1</div>
+<div class="qtext">Plural of “child”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">childs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">children</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">childes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="people Person changes to people." data-question-id="q47">
+<div class="qnum">Question 2</div>
+<div class="qtext">Plural of “person”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">persons</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">people</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">peoples</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="feet Foot changes to feet." data-question-id="q48">
+<div class="qnum">Question 3</div>
+<div class="qtext">Plural of “foot”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">foots</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">feet</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">feets</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="geese Goose changes to geese." data-question-id="q49">
+<div class="qnum">Question 4</div>
+<div class="qtext">Plural of “goose”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">gooses</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">geese</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">geeses</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="deer Deer stays the same." data-question-id="q50">
+<div class="qnum">Question 5</div>
+<div class="qtext">Plural of “deer”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">deers</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">deer</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">deeres</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">✅ Lesson 10 끝! 목차로 가기</a></div>
+</section>
+<section class="review-page" id="master">
+<div class="topnav"><a href="#home">← 목차</a><a href="#mixedA">Mock A →</a></div>
+<div class="lesson-head"><div class="lesson-no">Comprehensive Test Bank</div><h2>🧠 올해 범위 Master Test</h2><p>Lesson 1~10을 문법별로 8문제씩, 총 80문제입니다.</p></div>
+<div class="index-grid"><a href="#unit1">Unit 1. Simple Sentences</a><a href="#unit2">Unit 2. Kinds of Sentences</a><a href="#unit3">Unit 3. Compound Sentences</a><a href="#unit4">Unit 4. Common &amp; Proper Nouns</a><a href="#unit5">Unit 5. Plural Nouns</a><a href="#unit6">Unit 6. Verb Tenses</a><a href="#unit7">Unit 7. Using Commas</a><a href="#unit8">Unit 8. Abstract Nouns</a><a href="#unit9">Unit 9. Writing Quotations</a><a href="#unit10">Unit 10. Irregular Plural Nouns</a></div>
+<div id="unit1">
+<div class="test-unit" data-quiz-group="master-unit-1">
+<h3>Unit 1. Simple Sentences <span>8문제</span></h3>
+<div class="qcard" data-answer="1" data-explanation="The tall boy runs. A complete sentence has a subject and a predicate." data-question-id="q51">
+<div class="qnum">Test 1</div>
+<div class="qtext">Which group of words is a complete sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The tall boy</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The tall boy runs.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Under the tree</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="My little sister The subject tells who sings." data-question-id="q52">
+<div class="qnum">Test 2</div>
+<div class="qtext">What is the subject in “My little sister sings well”?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">My little sister</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">sings well</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">well</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="arrives early The predicate tells what the subject does." data-question-id="q53">
+<div class="qnum">Test 3</div>
+<div class="qtext">What is the predicate in “The school bus arrives early”?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The school bus</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">arrives early</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">school</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Our class eats lunch. It tells who and what happens." data-question-id="q54">
+<div class="qnum">Test 4</div>
+<div class="qtext">Which sentence has a complete idea?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Before lunch</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Our class eats lunch.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">At the cafeteria</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="The students read. Only the first word needs a capital here." data-question-id="q55">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which sentence begins correctly?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">the students read.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The students read.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">The Students read.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="We study English. A statement begins with a capital and ends with a period." data-question-id="q56">
+<div class="qnum">Test 6</div>
+<div class="qtext">Which sentence ends correctly?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We study English</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We study English.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">we study English.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="Near the window It does not tell what happens." data-question-id="q57">
+<div class="qnum">Test 7</div>
+<div class="qtext">Which is NOT a complete sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The dog barks.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Birds build nests.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Near the window</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="The teacher helps us. It has both a subject and predicate." data-question-id="q58">
+<div class="qnum">Test 8</div>
+<div class="qtext">Choose the best sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The teacher.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The teacher helps us.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Helps us.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit2">
+<div class="test-unit" data-quiz-group="master-unit-2">
+<h3>Unit 2. Kinds of Sentences <span>8문제</span></h3>
+<div class="qcard" data-answer="1" data-explanation="question It asks something." data-question-id="q59">
+<div class="qnum">Test 1</div>
+<div class="qtext">What kind of sentence is “Do you like science?”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">question</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">command</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="command It tells someone what to do." data-question-id="q60">
+<div class="qnum">Test 2</div>
+<div class="qtext">What kind of sentence is “Please bring your notebook.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">command</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">question</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">exclamation</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="statement It gives information." data-question-id="q61">
+<div class="qnum">Test 3</div>
+<div class="qtext">What kind of sentence is “The court is open.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">command</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">question</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="exclamation It shows strong feeling." data-question-id="q62">
+<div class="qnum">Test 4</div>
+<div class="qtext">What kind of sentence is “What an exciting game!”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">question</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">exclamation</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">statement</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="? A question ends with a question mark." data-question-id="q63">
+<div class="qnum">Test 5</div>
+<div class="qtext">Choose the correct punctuation: “When does class begin___”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">!</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="! It shows strong feeling or warning." data-question-id="q64">
+<div class="qnum">Test 6</div>
+<div class="qtext">Choose the correct punctuation: “Watch out___”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">!</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Is the judge kind? It asks for information." data-question-id="q65">
+<div class="qnum">Test 7</div>
+<div class="qtext">Which is a question?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The judge is kind.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Is the judge kind?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Be kind.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="My seat is near the door. It tells information." data-question-id="q66">
+<div class="qnum">Test 8</div>
+<div class="qtext">Which is a statement?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Please sit here.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Where is my seat?</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">My seat is near the door.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit3">
+<div class="test-unit" data-quiz-group="master-unit-3">
+<h3>Unit 3. Compound Sentences <span>8문제</span></h3>
+<div class="qcard" data-answer="0" data-explanation="but The two ideas contrast." data-question-id="q67">
+<div class="qnum">Test 1</div>
+<div class="qtext">Choose the best joining word: “I wanted to play, ___ it was raining.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">but</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">so</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="or Or gives a choice." data-question-id="q68">
+<div class="qnum">Test 2</div>
+<div class="qtext">Choose the best joining word: “We can walk, ___ we can take the bus.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">and</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">or</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">so</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="so The second idea is the result." data-question-id="q69">
+<div class="qnum">Test 3</div>
+<div class="qtext">Choose the best joining word: “I studied hard, ___ I got a good score.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">but</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">so</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="I was hungry, so I ate. Use the comma before the conjunction." data-question-id="q70">
+<div class="qnum">Test 4</div>
+<div class="qtext">Which is punctuated correctly?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">I was hungry, so I ate.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">I was hungry so, I ate.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I was, hungry so I ate.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="She smiled, and her friend waved. Each side can stand as a sentence." data-question-id="q71">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which sentence has two complete ideas?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">She smiled and waved.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">She smiled, and her friend waved.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Smiling and waving</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="and The actions are added together." data-question-id="q72">
+<div class="qnum">Test 6</div>
+<div class="qtext">Choose the best joining word: “Dad cooked dinner, ___ Mom set the table.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">and</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">but</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="The child reads, but the baby sleeps. It joins two complete sentences." data-question-id="q73">
+<div class="qnum">Test 7</div>
+<div class="qtext">Which is a compound sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The child reads quietly.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The child reads, but the baby sleeps.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Reading quietly</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="or Or shows what may happen otherwise." data-question-id="q74">
+<div class="qnum">Test 8</div>
+<div class="qtext">Complete: “Hurry up, ___ we will miss the bus.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">or</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">and</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">so</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit4">
+<div class="test-unit" data-quiz-group="master-unit-4">
+<h3>Unit 4. Common &amp; Proper Nouns <span>8문제</span></h3>
+<div class="qcard" data-answer="0" data-explanation="hospital Hospital is a general name." data-question-id="q75">
+<div class="qnum">Test 1</div>
+<div class="qtext">Which word is a common noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">hospital</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Seoul</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Dr. Park</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="Ms. Brown It is a special name and title." data-question-id="q76">
+<div class="qnum">Test 2</div>
+<div class="qtext">Which is a proper noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">teacher</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">river</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ms. Brown</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Central Park Both words are part of the proper name." data-question-id="q77">
+<div class="qnum">Test 3</div>
+<div class="qtext">Choose the correct capitalization.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">central park</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Central Park</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Central park</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="We visit Jeju in May. Jeju and May are proper nouns." data-question-id="q78">
+<div class="qnum">Test 4</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We visit Jeju in May.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We visit jeju in May.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We visit Jeju in may.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="august Month names begin with capitals." data-question-id="q79">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which word should be capitalized? “My birthday is in august.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">birthday</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">in</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">august</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="country Country is a general name." data-question-id="q80">
+<div class="qnum">Test 6</div>
+<div class="qtext">Which is NOT a proper noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Friday</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Korea</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">country</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Mrs. Kim The title and last name begin with capitals." data-question-id="q81">
+<div class="qnum">Test 7</div>
+<div class="qtext">Choose the correct name.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mrs. Kim</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Mrs. Kim</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Mrs. kim</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Tom lives on Pine Street. Names of people and streets use capitals." data-question-id="q82">
+<div class="qnum">Test 8</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Tom lives on Pine Street.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">tom lives on Pine street.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Tom lives on pine street.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit5">
+<div class="test-unit" data-quiz-group="master-unit-5">
+<h3>Unit 5. Plural Nouns <span>8문제</span></h3>
+<div class="qcard" data-answer="1" data-explanation="dishes Words ending in sh add -es." data-question-id="q83">
+<div class="qnum">Test 1</div>
+<div class="qtext">Plural of “dish”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">dishs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">dishes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">dishies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="toys Vowel + y usually adds -s." data-question-id="q84">
+<div class="qnum">Test 2</div>
+<div class="qtext">Plural of “toy”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">toys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">toies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">toyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="babies Consonant + y changes to -ies." data-question-id="q85">
+<div class="qnum">Test 3</div>
+<div class="qtext">Plural of “baby”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">babys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">babies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">babyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="wolves Wolf changes f to ves." data-question-id="q86">
+<div class="qnum">Test 4</div>
+<div class="qtext">Plural of “wolf”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">wolfs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">wolves</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">wolfes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="classes Words ending in s add -es." data-question-id="q87">
+<div class="qnum">Test 5</div>
+<div class="qtext">Plural of “class”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">classs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">classes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">classies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="keys Vowel + y adds -s." data-question-id="q88">
+<div class="qnum">Test 6</div>
+<div class="qtext">Plural of “key”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">keys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">keies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">keyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="watches Words ending in ch add -es." data-question-id="q89">
+<div class="qnum">Test 7</div>
+<div class="qtext">Plural of “watch”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">watchs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">watches</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">watchies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Three foxes live here. Fox adds -es." data-question-id="q90">
+<div class="qnum">Test 8</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Three fox live here.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Three foxes live here.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Three foxs live here.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit6">
+<div class="test-unit" data-quiz-group="master-unit-6">
+<h3>Unit 6. Verb Tenses <span>8문제</span></h3>
+<div class="qcard" data-answer="0" data-explanation="brushes Every morning signals present tense." data-question-id="q91">
+<div class="qnum">Test 1</div>
+<div class="qtext">Every morning, Ben ___ his teeth.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">brushes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">brushed</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will brush</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="played Last Saturday signals past tense." data-question-id="q92">
+<div class="qnum">Test 2</div>
+<div class="qtext">Last Saturday, we ___ soccer.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">play</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">played</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will play</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will buy Next month signals future tense." data-question-id="q93">
+<div class="qnum">Test 3</div>
+<div class="qtext">Next month, Dad ___ a new car.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">buys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">bought</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will buy</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="finished Yesterday signals past tense." data-question-id="q94">
+<div class="qnum">Test 4</div>
+<div class="qtext">Yesterday, I ___ my homework.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">finish</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">finished</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will finish</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="sleeps Usually signals a regular action." data-question-id="q95">
+<div class="qnum">Test 5</div>
+<div class="qtext">Usually, the baby ___ at noon.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">sleeps</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">slept</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will sleep</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will call Tomorrow signals future tense." data-question-id="q96">
+<div class="qnum">Test 6</div>
+<div class="qtext">Tomorrow, she ___ her friend.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">calls</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">called</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will call</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Last night, we watched a movie. Last night needs past tense." data-question-id="q97">
+<div class="qnum">Test 7</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Last night, we watched a movie.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Last night, we watch a movie.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Last night, we will watch a movie.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="Next week, he will visit the zoo. Next week needs will + base verb." data-question-id="q98">
+<div class="qnum">Test 8</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Next week, he visited the zoo.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Next week, he visits yesterday.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Next week, he will visit the zoo.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit7">
+<div class="test-unit" data-quiz-group="master-unit-7">
+<h3>Unit 7. Using Commas <span>8문제</span></h3>
+<div class="qcard" data-answer="1" data-explanation="apples, bananas, and grapes Use commas to separate three items." data-question-id="q99">
+<div class="qnum">Test 1</div>
+<div class="qtext">Choose the correct list.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">apples bananas and grapes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">apples, bananas, and grapes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">apples bananas, and grapes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Well, I am ready. Use a comma after Well." data-question-id="q100">
+<div class="qnum">Test 2</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Well I am ready.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Well, I am ready.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Well I, am ready.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="December 25, 2026 Use a comma between day and year." data-question-id="q101">
+<div class="qnum">Test 3</div>
+<div class="qtext">Choose the correct date.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">December 25, 2026</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">December, 25 2026</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">December 25 2026</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Paris, France Use a comma between city and country." data-question-id="q102">
+<div class="qnum">Test 4</div>
+<div class="qtext">Choose the correct place.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Paris France</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Paris, France</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Paris France,</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="I was tired, but I kept working. Use a comma before but." data-question-id="q103">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">I was tired, but I kept working.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">I was tired but, I kept working.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I was, tired but I kept working.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="No, thank you. Use a comma after No." data-question-id="q104">
+<div class="qnum">Test 6</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">No thank you.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">No, thank you.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">No thank, you.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="We sang, danced, and clapped. Commas separate three actions." data-question-id="q105">
+<div class="qnum">Test 7</div>
+<div class="qtext">Choose the correct list.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We sang, danced, and clapped.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We sang danced and clapped.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We sang, danced and, clapped.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="June 8, 2026 is Monday. The comma belongs between day and year." data-question-id="q106">
+<div class="qnum">Test 8</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">June 8, 2026 is Monday.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">June, 8 2026 is Monday.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">June 8 2026, is Monday.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit8">
+<div class="test-unit" data-quiz-group="master-unit-8">
+<h3>Unit 8. Abstract Nouns <span>8문제</span></h3>
+<div class="qcard" data-answer="0" data-explanation="love Love is a feeling or idea." data-question-id="q107">
+<div class="qnum">Test 1</div>
+<div class="qtext">Which word is an abstract noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">love</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">chair</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">apple</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="flower A flower can be seen and touched." data-question-id="q108">
+<div class="qnum">Test 2</div>
+<div class="qtext">Which word is a concrete noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">peace</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">honesty</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">flower</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="kindness Kindness is a quality." data-question-id="q109">
+<div class="qnum">Test 3</div>
+<div class="qtext">Which word names a quality?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">kindness</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">desk</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">pencil</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="anger Anger is a feeling." data-question-id="q110">
+<div class="qnum">Test 4</div>
+<div class="qtext">Which word names a feeling?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">anger</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">shoe</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">window</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="bicycle A bicycle is a physical object." data-question-id="q111">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which is NOT an abstract noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">freedom</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">sadness</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">bicycle</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="friendship Friendship is an idea or relationship." data-question-id="q112">
+<div class="qnum">Test 6</div>
+<div class="qtext">Choose the abstract noun.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">friendship</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">friend</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">photo</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="camera A camera can be touched." data-question-id="q113">
+<div class="qnum">Test 7</div>
+<div class="qtext">Choose the concrete noun.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">beauty</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">hope</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">camera</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Excitement is a feeling and an abstract noun ending in -ment." data-question-id="q114">
+<div class="qnum">Test 8</div>
+<div class="qtext">Which word is an abstract noun ending in -ment?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">excitement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">monkey</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">mountain</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit9">
+<div class="test-unit" data-quiz-group="master-unit-9">
+<h3>Unit 9. Writing Quotations <span>8문제</span></h3>
+<div class="qcard" data-answer="0" data-explanation="Mia said, “I am ready.” Use comma, quotation marks, and punctuation inside." data-question-id="q115">
+<div class="qnum">Test 1</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Mia said, “I am ready.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Mia said “I am ready”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Mia said, I am ready.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“Where are you going?” asked Sam. The question mark stays inside." data-question-id="q116">
+<div class="qnum">Test 2</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“Where are you going?” asked Sam.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“Where are you going”? asked Sam.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Where are you going? “asked Sam.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Dad said, “Turn off the light.” Capitalize the quotation and put punctuation inside." data-question-id="q117">
+<div class="qnum">Test 3</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Dad said, “Turn off the light.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Dad said “turn off the light”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Dad said, Turn off the light.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="the exact words someone says They show spoken words exactly." data-question-id="q118">
+<div class="qnum">Test 4</div>
+<div class="qtext">Quotation marks show…</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">the exact words someone says</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">the title of every sentence</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">the subject only</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“I won!” shouted Leo. The exclamation mark stays inside." data-question-id="q119">
+<div class="qnum">Test 5</div>
+<div class="qtext">Which is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“I won!” shouted Leo.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“I won”! shouted Leo.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I won! “shouted Leo.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“Come here,” said Mom. The comma stays inside the quotation." data-question-id="q120">
+<div class="qnum">Test 6</div>
+<div class="qtext">Choose the correct speaker tag.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“Come here,” said Mom.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“Come here”, said Mom.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">“Come here” said Mom.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Ben said, “This is fun.” The first word of the quotation begins with a capital." data-question-id="q121">
+<div class="qnum">Test 7</div>
+<div class="qtext">Which sentence begins the quotation correctly?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Ben said, “this is fun.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Ben said, “This is fun.”</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ben said, “This Is fun.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“I can help,” said Ava. Use a comma inside when the speaker tag follows." data-question-id="q122">
+<div class="qnum">Test 8</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“I can help,” said Ava.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“I can help”, said Ava.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">“I can help.” said Ava.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div><div id="unit10">
+<div class="test-unit" data-quiz-group="master-unit-10">
+<h3>Unit 10. Irregular Plural Nouns <span>8문제</span></h3>
+<div class="qcard" data-answer="1" data-explanation="men Man changes to men." data-question-id="q123">
+<div class="qnum">Test 1</div>
+<div class="qtext">Plural of “man”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mans</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">men</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">manes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="women Woman changes to women." data-question-id="q124">
+<div class="qnum">Test 2</div>
+<div class="qtext">Plural of “woman”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">womans</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">women</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">womens</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="teeth Tooth changes to teeth." data-question-id="q125">
+<div class="qnum">Test 3</div>
+<div class="qtext">Plural of “tooth”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">tooths</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">teeth</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">teeths</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="mice Mouse changes to mice." data-question-id="q126">
+<div class="qnum">Test 4</div>
+<div class="qtext">Plural of “mouse”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mouses</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">mice</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">mices</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="sheep Sheep stays the same." data-question-id="q127">
+<div class="qnum">Test 5</div>
+<div class="qtext">Plural of “sheep”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">sheeps</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">sheep</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">sheepes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="fish Fish often stays the same in basic grammar." data-question-id="q128">
+<div class="qnum">Test 6</div>
+<div class="qtext">Plural of “fish”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">fish</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">fishs</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">fishes only</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Two children are playing. Child → children." data-question-id="q129">
+<div class="qnum">Test 7</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Two children are playing.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Two childs are playing.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Two childrens are playing.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="My teeth are clean. Tooth → teeth." data-question-id="q130">
+<div class="qnum">Test 8</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">My teeth are clean.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">My tooths are clean.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">My teeths are clean.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div></div></div>
+<div class="finish"><a href="#home">목차로 가기</a></div>
+</section>
+<section class="review-page" data-quiz-group="mixedA" id="mixedA">
+<div class="topnav"><a href="#home">← 목차</a><a href="#master">Master Test</a><a href="#mixedB">Mock B →</a></div>
+<div class="lesson-head"><div class="lesson-no">Mixed Test A</div><h2>📝 Mixed Mock Test A</h2><p>올해 10개 문법을 섞은 20문제입니다. 목표는 16/20 이상입니다.</p></div>
+<div class="qcard" data-answer="1" data-explanation="The tall boy runs. A complete sentence has a subject and a predicate." data-question-id="q131">
+<div class="qnum">A 1</div>
+<div class="qtext">Which group of words is a complete sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The tall boy</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The tall boy runs.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Under the tree</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="My little sister The subject tells who sings." data-question-id="q132">
+<div class="qnum">A 2</div>
+<div class="qtext">What is the subject in “My little sister sings well”?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">My little sister</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">sings well</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">well</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="question It asks something." data-question-id="q133">
+<div class="qnum">A 3</div>
+<div class="qtext">What kind of sentence is “Do you like science?”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">question</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">command</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="command It tells someone what to do." data-question-id="q134">
+<div class="qnum">A 4</div>
+<div class="qtext">What kind of sentence is “Please bring your notebook.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">command</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">question</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">exclamation</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="but The two ideas contrast." data-question-id="q135">
+<div class="qnum">A 5</div>
+<div class="qtext">Choose the best joining word: “I wanted to play, ___ it was raining.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">but</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">so</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="or Or gives a choice." data-question-id="q136">
+<div class="qnum">A 6</div>
+<div class="qtext">Choose the best joining word: “We can walk, ___ we can take the bus.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">and</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">or</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">so</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="hospital Hospital is a general name." data-question-id="q137">
+<div class="qnum">A 7</div>
+<div class="qtext">Which word is a common noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">hospital</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Seoul</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Dr. Park</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="Ms. Brown It is a special name and title." data-question-id="q138">
+<div class="qnum">A 8</div>
+<div class="qtext">Which is a proper noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">teacher</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">river</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ms. Brown</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="dishes Words ending in sh add -es." data-question-id="q139">
+<div class="qnum">A 9</div>
+<div class="qtext">Plural of “dish”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">dishs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">dishes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">dishies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="toys Vowel + y usually adds -s." data-question-id="q140">
+<div class="qnum">A 10</div>
+<div class="qtext">Plural of “toy”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">toys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">toies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">toyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="brushes Every morning signals present tense." data-question-id="q141">
+<div class="qnum">A 11</div>
+<div class="qtext">Every morning, Ben ___ his teeth.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">brushes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">brushed</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will brush</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="played Last Saturday signals past tense." data-question-id="q142">
+<div class="qnum">A 12</div>
+<div class="qtext">Last Saturday, we ___ soccer.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">play</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">played</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will play</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="apples, bananas, and grapes Use commas to separate three items." data-question-id="q143">
+<div class="qnum">A 13</div>
+<div class="qtext">Choose the correct list.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">apples bananas and grapes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">apples, bananas, and grapes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">apples bananas, and grapes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Well, I am ready. Use a comma after Well." data-question-id="q144">
+<div class="qnum">A 14</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Well I am ready.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Well, I am ready.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Well I, am ready.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="love Love is a feeling or idea." data-question-id="q145">
+<div class="qnum">A 15</div>
+<div class="qtext">Which word is an abstract noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">love</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">chair</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">apple</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="flower A flower can be seen and touched." data-question-id="q146">
+<div class="qnum">A 16</div>
+<div class="qtext">Which word is a concrete noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">peace</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">honesty</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">flower</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Mia said, “I am ready.” Use comma, quotation marks, and punctuation inside." data-question-id="q147">
+<div class="qnum">A 17</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Mia said, “I am ready.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Mia said “I am ready”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Mia said, I am ready.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“Where are you going?” asked Sam. The question mark stays inside." data-question-id="q148">
+<div class="qnum">A 18</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“Where are you going?” asked Sam.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“Where are you going”? asked Sam.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Where are you going? “asked Sam.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="men Man changes to men." data-question-id="q149">
+<div class="qnum">A 19</div>
+<div class="qtext">Plural of “man”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mans</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">men</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">manes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="women Woman changes to women." data-question-id="q150">
+<div class="qnum">A 20</div>
+<div class="qtext">Plural of “woman”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">womans</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">women</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">womens</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#mixedB">다음: Mock Test B</a></div>
+</section>
+<section class="review-page" data-quiz-group="mixedB" id="mixedB">
+<div class="topnav"><a href="#home">← 목차</a><a href="#mixedA">← Mock A</a></div>
+<div class="lesson-head"><div class="lesson-no">Mixed Test B</div><h2>📝 Mixed Mock Test B</h2><p>다른 유형의 20문제로 다시 점검합니다. 목표는 17/20 이상입니다.</p></div>
+<div class="qcard" data-answer="1" data-explanation="arrives early The predicate tells what the subject does." data-question-id="q151">
+<div class="qnum">B 1</div>
+<div class="qtext">What is the predicate in “The school bus arrives early”?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The school bus</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">arrives early</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">school</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Our class eats lunch. It tells who and what happens." data-question-id="q152">
+<div class="qnum">B 2</div>
+<div class="qtext">Which sentence has a complete idea?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Before lunch</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Our class eats lunch.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">At the cafeteria</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="statement It gives information." data-question-id="q153">
+<div class="qnum">B 3</div>
+<div class="qtext">What kind of sentence is “The court is open.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">command</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">question</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="exclamation It shows strong feeling." data-question-id="q154">
+<div class="qnum">B 4</div>
+<div class="qtext">What kind of sentence is “What an exciting game!”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">question</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">exclamation</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">statement</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="so The second idea is the result." data-question-id="q155">
+<div class="qnum">B 5</div>
+<div class="qtext">Choose the best joining word: “I studied hard, ___ I got a good score.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">but</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">so</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">or</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="I was hungry, so I ate. Use the comma before the conjunction." data-question-id="q156">
+<div class="qnum">B 6</div>
+<div class="qtext">Which is punctuated correctly?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">I was hungry, so I ate.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">I was hungry so, I ate.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">I was, hungry so I ate.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Central Park Both words are part of the proper name." data-question-id="q157">
+<div class="qnum">B 7</div>
+<div class="qtext">Choose the correct capitalization.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">central park</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Central Park</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Central park</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="We visit Jeju in May. Jeju and May are proper nouns." data-question-id="q158">
+<div class="qnum">B 8</div>
+<div class="qtext">Which sentence is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We visit Jeju in May.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We visit jeju in May.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">We visit Jeju in may.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="babies Consonant + y changes to -ies." data-question-id="q159">
+<div class="qnum">B 9</div>
+<div class="qtext">Plural of “baby”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">babys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">babies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">babyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="wolves Wolf changes f to ves." data-question-id="q160">
+<div class="qnum">B 10</div>
+<div class="qtext">Plural of “wolf”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">wolfs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">wolves</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">wolfes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will buy Next month signals future tense." data-question-id="q161">
+<div class="qnum">B 11</div>
+<div class="qtext">Next month, Dad ___ a new car.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">buys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">bought</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will buy</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="finished Yesterday signals past tense." data-question-id="q162">
+<div class="qnum">B 12</div>
+<div class="qtext">Yesterday, I ___ my homework.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">finish</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">finished</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will finish</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="December 25, 2026 Use a comma between day and year." data-question-id="q163">
+<div class="qnum">B 13</div>
+<div class="qtext">Choose the correct date.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">December 25, 2026</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">December, 25 2026</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">December 25 2026</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Paris, France Use a comma between city and country." data-question-id="q164">
+<div class="qnum">B 14</div>
+<div class="qtext">Choose the correct place.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Paris France</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Paris, France</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Paris France,</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="kindness Kindness is a quality." data-question-id="q165">
+<div class="qnum">B 15</div>
+<div class="qtext">Which word names a quality?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">kindness</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">desk</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">pencil</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="anger Anger is a feeling." data-question-id="q166">
+<div class="qnum">B 16</div>
+<div class="qtext">Which word names a feeling?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">anger</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">shoe</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">window</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Dad said, “Turn off the light.” Capitalize the quotation and put punctuation inside." data-question-id="q167">
+<div class="qnum">B 17</div>
+<div class="qtext">Choose the correct sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Dad said, “Turn off the light.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Dad said “turn off the light”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Dad said, Turn off the light.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="the exact words someone says They show spoken words exactly." data-question-id="q168">
+<div class="qnum">B 18</div>
+<div class="qtext">Quotation marks show…</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">the exact words someone says</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">the title of every sentence</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">the subject only</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="teeth Tooth changes to teeth." data-question-id="q169">
+<div class="qnum">B 19</div>
+<div class="qtext">Plural of “tooth”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">tooths</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">teeth</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">teeths</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="mice Mouse changes to mice." data-question-id="q170">
+<div class="qnum">B 20</div>
+<div class="qtext">Plural of “mouse”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">mouses</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">mice</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">mices</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">목차로 가기</a></div>
+</section>
+<section class="review-page" data-quiz-group="quick" id="quick">
+<div class="topnav"><a href="#home">← 목차</a></div>
+<div class="lesson-head"><div class="lesson-no">Quick Review</div><h2>⚡ 작년 문법 한눈에 보기</h2><p>전체 규칙을 짧게 확인하고 10문제를 풀어요.</p></div>
+<div class="quick-grid"><div class="quick-card"><h4>Sentences &amp; Capitalization</h4><p>A sentence has a complete idea. Capitalize the first word and proper names.</p></div><div class="quick-card"><h4>Past Verbs</h4><p>walk→walked, play→played, go→went, see→saw, eat→ate</p></div><div class="quick-card"><h4>Pronouns</h4><p>I, you, he, she, it, we, they replace nouns.</p></div><div class="quick-card"><h4>Prepositions</h4><p>in, on, under, beside, between, behind</p></div><div class="quick-card"><h4>Adjectives</h4><p>Describe nouns: a bright star, three small birds.</p></div><div class="quick-card"><h4>Adverbs</h4><p>Tell when or how: yesterday, soon, quietly, carefully.</p></div><div class="quick-card"><h4>Possessive Nouns</h4><p>One owner: Mia’s book. Plural owners: students’ desks.</p></div><div class="quick-card"><h4>Special Pronouns</h4><p>myself, yourself, himself, herself, ourselves, themselves</p></div><div class="quick-card"><h4>Future Tense</h4><p>will + base verb: We will travel.</p></div><div class="quick-card"><h4>Comparatives</h4><p>tall→taller→tallest; beautiful→more beautiful→most beautiful</p></div></div>
+<h3 class="practice-title">Quick Check</h3>
+<div class="qcard" data-answer="1" data-explanation="visited Yesterday means past." data-question-id="q171">
+<div class="qnum">Quick 1</div>
+<div class="qtext">Yesterday, I ___ my grandma.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">visit</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">visited</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will visit</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="She She replaces Mina." data-question-id="q172">
+<div class="qnum">Quick 2</div>
+<div class="qtext">Mina has a book. ___ reads it.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">She</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Her</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">They</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="under Under shows place." data-question-id="q173">
+<div class="qnum">Quick 3</div>
+<div class="qtext">The cat is ___ the table.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">under</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">quietly</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">happy</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="beautiful Beautiful describes a noun." data-question-id="q174">
+<div class="qnum">Quick 4</div>
+<div class="qtext">Choose the adjective.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">beautiful</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">carefully</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">tomorrow</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="quietly Quietly tells how." data-question-id="q175">
+<div class="qnum">Quick 5</div>
+<div class="qtext">The baby slept ___.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">quiet</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">quietly</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">quieter</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Mina's Apostrophe + s shows one owner." data-question-id="q176">
+<div class="qnum">Quick 6</div>
+<div class="qtext">This is ___ pencil.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Mina</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Mina's</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Minas</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="themselves The plural reflexive pronoun is themselves." data-question-id="q177">
+<div class="qnum">Quick 7</div>
+<div class="qtext">They cleaned the room by ___.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">themselves</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">their</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">themself</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="will Future tense uses will + base verb." data-question-id="q178">
+<div class="qnum">Quick 8</div>
+<div class="qtext">Tomorrow, we ___ travel.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">will</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">did</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">are yesterday</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="faster Use comparative with than." data-question-id="q179">
+<div class="qnum">Quick 9</div>
+<div class="qtext">A train is ___ than a bike.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">fast</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">faster</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">fastest</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="highest Use superlative with the." data-question-id="q180">
+<div class="qnum">Quick 10</div>
+<div class="qtext">Mount Everest is the ___ mountain.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">high</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">higher</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">highest</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">목차로 가기</a></div>
+</section>
+<section class="review-page" data-quiz-group="mock" id="mock">
+<div class="topnav"><a href="#home">← 목차</a></div>
+<div class="lesson-head"><div class="lesson-no">Final Test</div><h2>🏆 Final Mock Test</h2><p>기존 종합 20문제입니다. 정답은 모두 푼 뒤 확인하세요.</p></div>
+<div class="qcard" data-answer="1" data-explanation="The students cheered. It has a subject and predicate." data-question-id="q181">
+<div class="qnum">Mock 1</div>
+<div class="qtext">Which is a complete sentence?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">After the class</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">The students cheered.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">In the library</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="command It tells someone what to do." data-question-id="q182">
+<div class="qnum">Mock 2</div>
+<div class="qtext">“Please close the window.” is a…</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">question</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">command</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">exclamation</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="We painted, and we displayed our work. Two complete ideas are joined." data-question-id="q183">
+<div class="qnum">Mock 3</div>
+<div class="qtext">Choose the compound sentence.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">We painted.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">We painted, and we displayed our work.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Painting our work</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="Han River It is a special name." data-question-id="q184">
+<div class="qnum">Mock 4</div>
+<div class="qtext">Which is a proper noun?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">river</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Han River</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">bridge</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="brushes Words ending in sh add -es." data-question-id="q185">
+<div class="qnum">Mock 5</div>
+<div class="qtext">Plural of “brush”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">brushs</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">brushes</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">brushies</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="made Yesterday means past." data-question-id="q186">
+<div class="qnum">Mock 6</div>
+<div class="qtext">Yesterday, she ___ a mask.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">makes</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">made</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will make</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="drums, bells, and flags Use commas in a list of three." data-question-id="q187">
+<div class="qnum">Mock 7</div>
+<div class="qtext">Choose the correct list.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">drums bells and flags</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">drums, bells, and flags</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">drums bells, and flags</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="courage Courage is a quality." data-question-id="q188">
+<div class="qnum">Mock 8</div>
+<div class="qtext">Which is abstract?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">courage</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">costume</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">stage</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="Ava said, “It works.” Correct quotation punctuation." data-question-id="q189">
+<div class="qnum">Mock 9</div>
+<div class="qtext">Which quotation is correct?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">Ava said, “It works.”</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">Ava said “It works”.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Ava said, It works.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="feet Foot → feet." data-question-id="q190">
+<div class="qnum">Mock 10</div>
+<div class="qtext">Plural of “foot”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">foots</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">feet</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">feets</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="The new robot The subject tells who or what." data-question-id="q191">
+<div class="qnum">Mock 11</div>
+<div class="qtext">Choose the subject: “The new robot moves.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">The new robot</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">moves</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">new</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="exclamation It shows strong feeling." data-question-id="q192">
+<div class="qnum">Mock 12</div>
+<div class="qtext">“What a clever idea!” is a…</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">statement</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">command</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">exclamation</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="so The second event is the result." data-question-id="q193">
+<div class="qnum">Mock 13</div>
+<div class="qtext">I practiced, ___ I improved.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">so</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">or</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">but</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="october Month names are proper nouns." data-question-id="q194">
+<div class="qnum">Mock 14</div>
+<div class="qtext">Which word needs a capital? “We travel in october.”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">travel</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">in</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">october</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="babies Consonant + y changes to -ies." data-question-id="q195">
+<div class="qnum">Mock 15</div>
+<div class="qtext">Plural of “baby”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">babys</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">babies</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">babyes</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="2" data-explanation="will perform Tomorrow means future." data-question-id="q196">
+<div class="qnum">Mock 16</div>
+<div class="qtext">Tomorrow, they ___ a show.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">performed</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">perform yesterday</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">will perform</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="No, I did not. Use a comma after No." data-question-id="q197">
+<div class="qnum">Mock 17</div>
+<div class="qtext">Choose the correct comma use.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">No I did not.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">No, I did not.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">No I, did not.</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="piano A piano can be touched." data-question-id="q198">
+<div class="qnum">Mock 18</div>
+<div class="qtext">Which is concrete?</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">friendship</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">piano</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">honesty</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="0" data-explanation="“Can it fly?” asked Leo. Question mark stays inside." data-question-id="q199">
+<div class="qnum">Mock 19</div>
+<div class="qtext">Choose the correct quotation.</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">“Can it fly?” asked Leo.</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">“Can it fly”? asked Leo.</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">Can it fly? “asked Leo.”</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="qcard" data-answer="1" data-explanation="geese Goose → geese." data-question-id="q200">
+<div class="qnum">Mock 20</div>
+<div class="qtext">Plural of “goose”</div>
+<div class="choice-list"><button aria-label="A번 보기" class="choice" data-option="0" type="button"><span class="choice-letter">A</span><span class="choice-text">gooses</span></button><button aria-label="B번 보기" class="choice" data-option="1" type="button"><span class="choice-letter">B</span><span class="choice-text">geese</span></button><button aria-label="C번 보기" class="choice" data-option="2" type="button"><span class="choice-letter">C</span><span class="choice-text">geeses</span></button></div>
+<div aria-live="polite" class="feedback"></div></div>
+<div class="quiz-controls"><button class="grade-btn" type="button">📊 평가하기</button><button class="retry-btn" type="button">🔄 다시 풀기</button><div aria-live="polite" class="score-result"></div></div><div class="finish"><a href="#home">목차로 가기</a></div>
+</section>
+</main></div>
+<script>
+(function(){
+  const STORE_KEY = "polyMag1InteractiveV2";
+
+  function loadStore(){
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); }
+    catch(e){ return {}; }
+  }
+  function saveStore(store){
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch(e){}
+  }
+  let store = loadStore();
+
+  function getGroup(el){ return el.closest("[data-quiz-group]"); }
+
+  document.addEventListener("click", function(e){
+    const choice = e.target.closest(".choice");
+    if(choice){
+      const card = choice.closest(".qcard");
+      if(card.dataset.graded === "1") return;
+      card.querySelectorAll(".choice").forEach(x => x.classList.remove("selected"));
+      choice.classList.add("selected");
+      card.dataset.selected = choice.dataset.option;
+
+      const group = getGroup(card);
+      if(group){
+        const gid = group.dataset.quizGroup;
+        store[gid] = store[gid] || {answers:{}, score:null};
+        store[gid].answers[card.dataset.questionId] = Number(choice.dataset.option);
+        saveStore(store);
+      }
+      return;
+    }
+
+    const gradeBtn = e.target.closest(".grade-btn");
+    if(gradeBtn){
+      gradeGroup(getGroup(gradeBtn));
+      return;
+    }
+
+    const retryBtn = e.target.closest(".retry-btn");
+    if(retryBtn){
+      resetGroup(getGroup(retryBtn));
+    }
+  });
+
+  function gradeGroup(group){
+    if(!group) return;
+    const cards = [...group.querySelectorAll(".qcard")];
+    let correct = 0, answered = 0;
+
+    cards.forEach((card, idx) => {
+      const answer = Number(card.dataset.answer);
+      const selected = card.dataset.selected === undefined ? NaN : Number(card.dataset.selected);
+      const feedback = card.querySelector(".feedback");
+      card.dataset.graded = "1";
+
+      card.querySelectorAll(".choice").forEach(btn => {
+        const n = Number(btn.dataset.option);
+        btn.classList.remove("correct","wrong");
+        if(n === answer) btn.classList.add("correct");
+        if(!Number.isNaN(selected) && n === selected && selected !== answer) btn.classList.add("wrong");
+      });
+
+      if(!Number.isNaN(selected)){
+        answered++;
+        if(selected === answer) correct++;
+      }
+
+      feedback.className = "feedback show " + (selected === answer ? "good" : "bad");
+      if(Number.isNaN(selected)){
+        feedback.innerHTML = "⚠️ 답을 고르지 않았어요.<br><b>정답: " +
+          String.fromCharCode(65+answer) + "</b><br>" + card.dataset.explanation;
+      } else if(selected === answer){
+        feedback.innerHTML = "✅ 정답이에요!<br>" + card.dataset.explanation;
+      } else {
+        feedback.innerHTML = "💡 다시 기억해요. <b>정답은 " +
+          String.fromCharCode(65+answer) + "번</b>이에요.<br>" + card.dataset.explanation;
+      }
+    });
+
+    const percent = cards.length ? Math.round(correct/cards.length*100) : 0;
+    const result = group.querySelector(".score-result");
+    let message = percent >= 90 ? "Excellent! 문법 실력이 아주 탄탄해요. 🌟" :
+                  percent >= 80 ? "Great job! 시험 목표 점수에 가까워요. 👍" :
+                  percent >= 70 ? "Good try! 틀린 문제를 한 번 더 복습해요. 💪" :
+                                  "문법 규칙을 다시 읽고 재도전해요. 📘";
+    result.innerHTML =
+      '<div class="score-big">'+correct+' / '+cards.length+'</div>' +
+      '<div class="score-percent">정답률 '+percent+'%</div>' +
+      '<div class="score-message">'+message+'</div>' +
+      (answered < cards.length ? '<div class="unanswered-note">미응답 '+(cards.length-answered)+'문제도 오답으로 처리했어요.</div>' : '') +
+      '<span class="saved-badge">✓ 점수 자동 저장됨</span>';
+    result.classList.add("show");
+
+    const gid = group.dataset.quizGroup;
+    store[gid] = store[gid] || {answers:{}};
+    store[gid].score = {correct, total:cards.length, percent, gradedAt:new Date().toISOString()};
+    saveStore(store);
+    result.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+
+  function resetGroup(group){
+    if(!group) return;
+    if(!confirm("이 평가의 선택 답과 점수를 지우고 다시 풀까요?")) return;
+    group.querySelectorAll(".qcard").forEach(card => {
+      delete card.dataset.selected;
+      delete card.dataset.graded;
+      card.querySelectorAll(".choice").forEach(btn => btn.classList.remove("selected","correct","wrong"));
+      const feedback = card.querySelector(".feedback");
+      feedback.className = "feedback";
+      feedback.innerHTML = "";
+    });
+    const result = group.querySelector(".score-result");
+    if(result){ result.classList.remove("show"); result.innerHTML = ""; }
+    delete store[group.dataset.quizGroup];
+    saveStore(store);
+  }
+
+  function restore(){
+    document.querySelectorAll("[data-quiz-group]").forEach(group => {
+      const saved = store[group.dataset.quizGroup];
+      if(!saved) return;
+      group.querySelectorAll(".qcard").forEach(card => {
+        const val = saved.answers && saved.answers[card.dataset.questionId];
+        if(val !== undefined){
+          card.dataset.selected = val;
+          const btn = card.querySelector('.choice[data-option="'+val+'"]');
+          if(btn) btn.classList.add("selected");
+        }
+      });
+      if(saved.score) gradeGroup(group);
+    });
+  }
+
+  restore();
+})();
+</script></body></html>
