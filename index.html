@@ -13,64 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-/* 학습 모드 선택 */
-.study-launcher {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 22px 0 26px;
-}
 
-.study-launcher a {
-  display: block;
-  padding: 22px 18px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: #17233a;
-  background: #ffffff;
-  border: 2px solid #dce3ed;
-  box-shadow: 0 8px 22px -12px rgba(23, 35, 58, 0.28);
-  transition: transform 0.15s ease;
-}
-
-.study-launcher a:active {
-  transform: scale(0.98);
-}
-
-.study-launcher .study-button {
-  border-color: #7cb342;
-  background: #f3f9e9;
-}
-
-.study-launcher .test-button {
-  border-color: #5c6bc0;
-  background: #eef0ff;
-}
-
-.study-launcher .icon {
-  display: block;
-  font-size: 42px;
-  margin-bottom: 8px;
-}
-
-.study-launcher strong {
-  display: block;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.study-launcher small {
-  display: block;
-  color: #59677d;
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-@media (max-width: 650px) {
-  .study-launcher {
-    grid-template-columns: 1fr;
-  }
-}
   <style>
 :root{
   --ink:#17233A; --ink-2:#43536E; --muted:#8494AE;
@@ -189,7 +132,67 @@ tr:nth-child(even) td{background:#F8FAFC}
 .footnote{margin-top:44px;padding:16px 18px;border-radius:14px;background:#E4E9F1;border:1px solid var(--line);font-size:13.5px;color:var(--ink-2);font-weight:600}
 :focus-visible{outline:3px solid #5AA9E6;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-</style>
+
+    /* 학습 모드 선택 */
+.study-launcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 26px;
+}
+
+.study-launcher a {
+  display: block;
+  padding: 22px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #17233a;
+  background: #ffffff;
+  border: 2px solid #dce3ed;
+  box-shadow: 0 8px 22px -12px rgba(23, 35, 58, 0.28);
+  transition: transform 0.15s ease;
+}
+
+.study-launcher a:active {
+  transform: scale(0.98);
+}
+
+.study-launcher .study-button {
+  border-color: #7cb342;
+  background: #f3f9e9;
+}
+
+.study-launcher .test-button {
+  border-color: #5c6bc0;
+  background: #eef0ff;
+}
+
+.study-launcher .icon {
+  display: block;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.study-launcher strong {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.study-launcher small {
+  display: block;
+  color: #59677d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 650px) {
+  .study-launcher {
+    grid-template-columns: 1fr;
+  }
+}
+  
+  </style>
 </head>
 <body>
 <div class="bar"><div class="bar-in">
